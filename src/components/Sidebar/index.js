@@ -1,7 +1,7 @@
 import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
 import LogoS from '../../assets/images/Gear_5_Infobox.png'
-import logoSubtitle from '../../assets/images/SpaceCityNerd-longway-logo-removebg-preview.png'
+import logoSubtitle from '../../assets/images/digital_spaceCity_logo-removebg-preview.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import {
