@@ -3,7 +3,7 @@ import LogoTitle from '../../assets/images/digital_S-removebg-preview.png'
 import './index.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-
+import Logo from './Logo'
 // 'f', 'u', 'l', 'l','s', 't', 'a', 'c', 'k',
 
 const Home = () => {
@@ -65,6 +65,7 @@ const Home = () => {
           Contact me
         </Link>
       </div>
+      <Logo />
     </div>
   )
 }

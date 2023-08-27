@@ -17,6 +17,11 @@ $primary-color: #ffd700;
   font-family: 'hCoolvetica';
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2')
 }
+
+@font-face {
+  font-family: 'Hacked';
+  src: url('./assets/fonts/Hacked-KerX.ttf') format('ttf')
+}
 input, textarea{
   font-family: 'Helventica Neue';
 }
