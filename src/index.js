@@ -4,14 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { Dna } from 'react-loader-spinner';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
     <App />
+    <div className='Dna'>
+    <Dna 
+          visible={true}
+          height="800"
+          width="1800"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+        />
+        </div>
     </BrowserRouter>
   </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

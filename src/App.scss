@@ -1,6 +1,7 @@
 $primary-color: #ffd700;
 
 @import "animate.css";
+@import '~loaders.css/src/animations/pacman.scss';
 
 @font-face {
   font-family: 'Helventica Neue';
@@ -40,7 +41,7 @@ input, textarea{
   position: relative;
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
-  animation: glitch 725ms infinite;
+  animation: glitch 800ms infinite;
 }
 
 .glitch div {
@@ -92,4 +93,15 @@ input, textarea{
     text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
       -0.04em -0.025em 0 #fffc00;
   }
+}
+
+.Dna {
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  animation: fadeOut 1s 1s ;
+  animation-fill-mode: forwards;
+
 }

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './components/Home'
 import About from './components/About'
+import Contact from './components/contact'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Layout />}>
         <Route path="About" element={<About />} />
         <Route index element={<Home />} />
+        <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
       
