@@ -7,10 +7,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Layout />}>
         {/* ADD the index back */}
         <Route index element={<Home />} />
+        </Route>
       </Routes>
+      
     </>
   )
 }
