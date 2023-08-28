@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-// import { send } from '@emailjs/browser'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 // import InputPrompt from 'inquirer/lib/prompts/input'
 
 const Contact = () => {
   const [letterClass, setletterClass] = useState('text-animate')
+  const refForm = useRef()
 
   useEffect(() => {
     const timeOutID = setTimeout(() => {
@@ -15,9 +17,31 @@ const Contact = () => {
       clearTimeout(timeOutID)
     }
   }, [])
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        'gmail',
+        'template_eyiuf9j',
+        refForm.current,
+        '90mlj6pBwsViNs2wT'
+      )
+      .then(
+        () => {
+          alert('message successfully sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('failed to send')
+        console.log(sendEmail);
+        }
+      )
+  }
   return (
     <>
-      <div className="container contact-page">
+      <div className="Dna"></div>
+      <div className="container contact-page ">
         <div className="text-zone">
           <h1>
             <div className="glitch">
@@ -33,7 +57,7 @@ const Contact = () => {
             free to send me an email at:
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li class="half">
                   <input type="text" name="name" placeholder="name" required />

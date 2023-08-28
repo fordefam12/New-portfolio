@@ -15,6 +15,7 @@ const Layout = ({children}) => {
           &lt;/body&gt;
           <br />
           <span className="bottom-tag-html">&lt;/html&gt;</span>
+          <div className='Dna'></div>
         </span>
       </div>
     </div>

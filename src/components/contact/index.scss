@@ -1,12 +1,4 @@
-.Dna {
-  display: block;
-  position: absolute;
-  margin: auto;
-  width: 500px;
-  height: 500px;
-  animation: fadeOut 1s 1s;
-  animation-fill-mode: forwards;
-}
+
 .contact-form {
   width: 100%;
   margin-top: 20px;
@@ -27,6 +19,9 @@
       animation-fill-mode: forwards;
       clear: both;
     }
+    ::placeholder{
+        color: #000;
+    }
     li.half {
       width: 49%;
       margin-left: 2%;
@@ -41,7 +36,7 @@
   input[type='text'], input[type='email'] {
     width: 100%;
     border: 0;
-    background: #115173;
+    background: #666666;
     height: 50px;
     font-size: 16px;
     color: #fff;
@@ -51,10 +46,10 @@
   textarea {
     width: 100%;
     border: 0;
-    background: #002bff;
+    background: #666666;
     height: 50px;
     font-size: 16px;
-    color: #fff;
+    color: #ffffff;
     padding: 0 20px;
     min-height: 150px;
     box-sizing: border-box;

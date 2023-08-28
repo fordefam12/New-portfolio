@@ -105,3 +105,12 @@
         color: aliceblue;
     }
 }
+.Dna {
+    display: block;
+    position: absolute;
+    margin: auto;
+    width: 50px;
+    height: 500px;
+    animation: fadeOut 10s 10s;
+    animation-fill-mode: forwards;
+  }

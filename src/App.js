@@ -7,7 +7,7 @@ import Contact from './components/contact'
 
 function App() {
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="About" element={<About />} />
@@ -15,7 +15,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-    </>
+    </div>
   )
 }
 
