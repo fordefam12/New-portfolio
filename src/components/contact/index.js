@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import { send } from '@emailjs/browser'
+// import { send } from '@emailjs/browser'
 // import InputPrompt from 'inquirer/lib/prompts/input'
 
 const Contact = () => {
@@ -35,10 +35,10 @@ const Contact = () => {
           <div className="contact-form">
             <form>
               <ul>
-                <li className="half">
+                <li class="half">
                   <input type="text" name="name" placeholder="name" required />
                 </li>
-                <li className="half">
+                <li class="half">
                   <input
                     type="email"
                     name="email"
@@ -46,16 +46,26 @@ const Contact = () => {
                     required
                   />
                 </li>
-                <li className="half">
-                  <input placeholder="subject" type="text" name="subject" required
+                <li>
+                  <input
+                    placeholder="subject"
+                    type="text"
+                    name="subject"
+                    required
                   />
                 </li>
                 <li>
-                    <textarea placeholder='message' name='message' required></textarea>
+                  <textarea
+                    placeholder="message"
+                    name="message"
+                    required
+                  ></textarea>
                 </li>
-                
-                    <button class="glow-on-hover"  type='button' className='flat-button glow-on-hover' value='SEND'>submit</button>
-                
+
+                <button class="glow-on-hover" type="submit" value="SEND">
+                  {' '}
+                  send
+                </button>
               </ul>
             </form>
           </div>

@@ -1,9 +1,12 @@
 import './index.scss'
 import Sidebar from '../Sidebar'
+import ParticlesContainer from '../particles/ParticlesContainer'
 import { Outlet } from 'react-router-dom'
-const Layout = () => {
+const Layout = ({children}) => {
   return (
-    <div className="APP">
+    <div className="APP layout">
+      <ParticlesContainer />
+      {children}
       <Sidebar />
       <div className="page">
         <span className="tags top-tags">&lt;body&gt;</span>

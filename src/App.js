@@ -5,18 +5,16 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/contact'
 
-
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-        <Route path="About" element={<About />} />
-        <Route index element={<Home />} />
-        <Route path="contact" element={<Contact />} />
+          <Route path="About" element={<About />} />
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-      
     </>
   )
 }
