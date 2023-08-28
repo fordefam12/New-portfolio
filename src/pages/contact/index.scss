@@ -1,0 +1,223 @@
+/* Color Scheme */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f2f2f2;
+    --text-color: #333333;
+  }
+  
+  /* Fonts */
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 10px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 2s 2s;
+      animation-fill-mode: forwards;
+      clear: both;
+    }
+    ::placeholder{
+        color: #000;
+    }
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    background: var(--background-color);
+    border: 1px solid #ccc;
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+
+  input[type='text']:focus,
+  input[type='email']:focus,
+  textarea:focus {
+    border-color: var(--primary-color);
+    background-color: white;
+    outline: none;
+  }
+}
+  textarea {
+    width: 100%;
+    border: 0;
+    background: #666666;
+    height: 50px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 20px;
+    min-height: 150px;
+    box-sizing: border-box;
+  }
+  .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #4e4e4e,
+      #ff00c8,
+      #ff0000,
+      rgb(220, 20, 60)
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .glow-on-hover:active {
+    color: #000;
+  }
+
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+.contact-page {
+  position: absolute;
+  left: 10%;
+  transform: translateY(-30%);
+  top: 50%;
+  width: 35%;
+  vertical-align: middle;
+  display: table-cell;
+  max-height: 90%;
+
+  h1 {
+    font-size: 53px;
+    font-family: 'hCoolvetica';
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 40px;
+    left: 10px;
+
+    &::before {
+      content: '<h1>';
+      font-family: 'La Belle Aurore';
+      font-size: 18px;
+      position: absolute;
+      margin-top: -10px;
+      left: -10px;
+      opacity: 0.6;
+      line-height: 18px;
+    }
+    &::after {
+      content: '</h1>';
+      font-family: 'La Belle Aurore';
+      font-size: 18px;
+      position: absolute;
+      margin-left: 20px;
+      bottom: -20px;
+      left: -30px;
+      opacity: 0.6;
+    }
+  }
+  p {
+    font-style: 10px;
+    color: aquamarine;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+    min-width: fit-content;
+    animation: pulse 3s;
+
+    &:nth-of-type(1) {
+      animation-delay: 1s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 2s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: 3s;
+    }
+  }
+}
+.text-animate-hover {
+  &:hover {
+    color: aliceblue;
+  }
+}

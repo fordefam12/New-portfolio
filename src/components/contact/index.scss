@@ -1,4 +1,16 @@
-
+/* Color Scheme */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f2f2f2;
+    --text-color: #333333;
+  }
+  
+  /* Fonts */
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
 .contact-form {
   width: 100%;
   margin-top: 20px;
@@ -33,16 +45,28 @@
       }
     }
   }
-  input[type='text'], input[type='email'] {
-    width: 100%;
-    border: 0;
-    background: #666666;
-    height: 50px;
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    background: var(--background-color);
+    border: 1px solid #ccc;
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
     font-size: 16px;
-    color: #fff;
-    padding: 0 20px;
-    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, background-color 0.3s;
   }
+
+  input[type='text']:focus,
+  input[type='email']:focus,
+  textarea:focus {
+    border-color: var(--primary-color);
+    background-color: white;
+    outline: none;
+  }
+}
   textarea {
     width: 100%;
     border: 0;
@@ -131,7 +155,7 @@
       background-position: 0 0;
     }
   }
-}
+
 .contact-page {
   position: absolute;
   left: 10%;
