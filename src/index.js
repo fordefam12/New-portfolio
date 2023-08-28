@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <App />
-    <div className='Dna'>
+    <div className='Dna' />
     <Dna 
           visible={true}
           height="800"
@@ -20,7 +20,7 @@ root.render(
           wrapperStyle={{}}
           wrapperClass="dna-wrapper"
         />
-        </div>
+        
     </BrowserRouter>
   </React.StrictMode>
   

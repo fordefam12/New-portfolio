@@ -3,6 +3,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { Dna } from 'react-loader-spinner'
 // import InputPrompt from 'inquirer/lib/prompts/input'
 
 const Contact = () => {
@@ -22,7 +23,7 @@ const Contact = () => {
     e.preventDefault()
     emailjs
       .sendForm(
-        'gmail',
+        'service_z1bbh7n',
         'template_eyiuf9j',
         refForm.current,
         '90mlj6pBwsViNs2wT'
@@ -32,15 +33,22 @@ const Contact = () => {
           alert('message successfully sent!')
           window.location.reload(false)
         },
-        () => {
+        (error) => {
           alert('failed to send')
-        console.log(sendEmail);
+        console.log(error);
         }
       )
   }
   return (
     <>
-      <div className="Dna"></div>
+      <div className="Dna"><Dna
+          visible={true}
+          height="800"
+          width="1800"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+        /></div>
       <div className="container contact-page ">
         <div className="text-zone">
           <h1>
