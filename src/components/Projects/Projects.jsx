@@ -110,10 +110,10 @@ const Projects = () => {
             <img src={project.image} alt={project.title} />
             <div className="project-links">
               <h3>{project.title}</h3>
-              <a to={project.live} className="deploy-link">
+              <a href={project.live} className="deploy-link">
                 <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
               </a>
-              <a to={project.repo} className="repo-link">
+              <a href={project.repo} className="repo-link">
                 <FontAwesomeIcon icon={faGithubAlt} /> Repo Link
               </a>
             </div>
