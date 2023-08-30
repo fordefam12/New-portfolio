@@ -11,6 +11,7 @@ import About from './pages/About'
 import Profile from './components/Porftolio/Profile.jsx'
 import Resume from './components/Resume/Resume.jsx'
 import Home from './components/Home/index.jsx'
+import MagicGrid from './components/Projects/Projects.jsx'
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: '/Resume',
         element: <Resume />,
+      },
+      {
+        path: '/Projects',
+        element: <MagicGrid />,
       },
     ],
   },

@@ -37,7 +37,7 @@ const Sidebar = () => (
       <NavLink exact="true" activeclassname="active" className="Resume-link" to="/Resume">
         <FontAwesomeIcon icon={faSearch} color="#4d4d4e" />
       </NavLink>
-      <NavLink exact="true" activeclassname="active" className="TBD-link" to="/error">
+      <NavLink exact="true" activeclassname="active" className="TBD-link" to="/Projects">
         <FontAwesomeIcon icon={faBoltLightning} color="#4d4d4e" />
       </NavLink><NavLink exact="true" activeclassname="active" className="TBD-link" to="/error">
         <FontAwesomeIcon icon={faBaby} color="#4d4d4e" />

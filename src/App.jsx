@@ -7,6 +7,8 @@ import Contact from './components/contact'
 import Resume from './components/Resume/Resume'
 import Profile from './components/Porftolio/Profile' 
 import ParticlesContainer from './components/particles/ParticlesContainer'
+import Projects from './components/Projects/Projects'
+// import MagicGrid from './components/Projects/Projects'
 // import ErrorPage from './components/Error'
 
 
@@ -24,7 +26,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="Resume" element={<Resume />} />
           <Route path="Profile" element={<Profile />} />
-        
+          <Route path="Projects" element={<Projects/>} />
         </Route>
       </Routes>
         <div className='centered-particles-page'>

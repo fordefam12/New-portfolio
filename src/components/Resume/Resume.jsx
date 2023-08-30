@@ -6,7 +6,7 @@ export default function Resume() {
       <h1 className="resume-title">Resume</h1>
       <a
         className="resume-download"
-        href="src/assets/brandon-software-resume.docx"
+        href="src\assets\brandonForde.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
