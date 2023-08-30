@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# B-react-portfolio
 
-## Available Scripts
 
-In the project directory, you can run:
+<div align="center">
+  <br/>
+  <a href="">
+    <img alt="logo" height="200" src="./src/assets/images/ezgif-2-83d0111f69.gif" width="250" />
+  </a>
+  <br/>
+</div>
+## Description
 
-### `npm start`
+ Dedicated entry-level Nondestructive Testing Examiner seeking immediate employment with a company providing long-term opportunities for growth, training, and advancement. Hardworking and passionate job seeker with strong organizational skills eager to secure entry-level software developer position. Ready to help team achieve company goals.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
+*[Title](#title)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*[Description](#description)
+    
+*[Installation](#installation)   
 
-### `npm test`
+*[License](#license)
+    
+*[Questions](#questions)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*[URL](#URL)
+    
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Clone the GitHub repository to your local machine.
+* Ensure you have Node.js installed.
+* Execute npm install to install the required dependencies.
+* Initiate the web server and establish connection by running npm start.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
+[![License: The_Unlicense](https://img.shields.io/badge/License-The_Unlicense-brightgreen.svg)](https://opensource.org/licenses/The_Unlicense)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## badges
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![JavaScript:](https://img.shields.io/badge/JavaScript-85.6%25-blue)
+             ![HTML:](https://img.shields.io/badge/HTML-11.2%25-red)
+             ![CSS:](https://img.shields.io/badge/CSS-3.2%25-purple)
 
-## Learn More
+<p align='center'>
+<a><img src="https://github-readme-stats.vercel.app/api?username=fordefam12&show_icons=true&theme=transparent" alt="fordefam12's github stats"></a>
+<a><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fordefam12&layout=compact" height ="20%" width= "27%"></a>
+</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Questions
+Any questions about this project please send me a message on *https://github.com/fordefam12 or email me at [fordefam12@gmail.com]
 
-### Code Splitting
+## URL
+  
+  <p align='center'>
+<a href='https://main--peppy-begonia-b8069b.netlify.app/'>
+CLICK QR CODE for deploy link
+<img src='./src/assets/qr-code (13) (1).png' width="25%"></a>
+</p>
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![screenshot](<src/assets/brandon's portfolio.png>)

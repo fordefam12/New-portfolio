@@ -28,7 +28,7 @@
   height: 690px;
   position: absolute;
   top: 0;
-  right: 15%;
+  right: -25%;
   bottom: 0;
   left: auto;
   margin: auto;
@@ -57,13 +57,4 @@
 .svg-container {
   stroke: rgb(188, 190, 19);
   stroke-width: 10px;
-}
-.Dna {
-  display: block;
-  position: absolute;
-  margin: auto;
-  width: 500px;
-  height: 500px;
-  animation: fadeOut 1s 1s;
-  animation-fill-mode: forwards;
 }

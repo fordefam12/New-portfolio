@@ -1,22 +1,37 @@
 import './index.scss'
 import Sidebar from '../Sidebar'
-import ParticlesContainer from '../particles/ParticlesContainer'
+// import ParticlesContainer from '../particles/ParticlesContainer'
+
+
 import { Outlet } from 'react-router-dom'
-const Layout = ({children}) => {
+import { Dna } from 'react-loader-spinner'
+const Layout = () => {
   return (
-    <div className="APP layout">
-      <ParticlesContainer />
-      {children}
+    <div className="APP layout ">
+      
       <Sidebar />
-      <div className="page">
+      
+      <div className="page content">
+      
         <span className="tags top-tags">&lt;body&gt;</span>
-        <Outlet />
+        
         <span className="tags bottom-tags">
           &lt;/body&gt;
           <br />
           <span className="bottom-tag-html">&lt;/html&gt;</span>
-          <div className='Dna'></div>
+         
         </span>
+        <Outlet />
+        <div className='Dna'>
+        <Dna
+  visible={true}
+  height="500"
+  width="1200"
+  ariaLabel="dna-loading"
+  wrapperStyle={{}}
+  wrapperClass="dna-wrapper"
+/>
+</div>
       </div>
     </div>
   )

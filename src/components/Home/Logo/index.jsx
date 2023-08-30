@@ -1,24 +1,8 @@
 import './index.scss'
-import logoS from '../../../assets/images/digital S blk and red-removebg-preview.png'
-// import { useRef } from 'react'
-// import { useEffect } from 'react'
-// import { gsap } from 'gsap-trial'
-// import { DrawSVGPlugin } from 'gsap-trial/DrawSVGPlugin'
-// import outline from '../../../logo.svg'
+import logoS from '../../../assets/images/text-1693119463381.png'
+
 const Logo = () => {
 
-//   const bgRef = useRef()
-//   const outlineLogoRef = useRef()
-//   const solidLogoRef = useRef()
-
-// useEffect(() => {
-// gsap.registerPlugin(DrawSVGPlugin)
-// gsap.timeline()
-// to(bgRef.current, {
-// duration: 1,
-// opacity:1
-// })
-// },[])
 
   return (
     <div className="logo-container">

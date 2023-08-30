@@ -11,7 +11,7 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
 import { faChartPie } from '@fortawesome/free-solid-svg-icons'
-import { Dna } from 'react-loader-spinner'
+
 
 const About = () => {
   const [letterClass, setletterClass] = useState('text-animate')
@@ -78,16 +78,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="Dna">
-        <Dna
-          visible={true}
-          height="800"
-          width="1800"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper"
-        />
       </div>
     </>
   )

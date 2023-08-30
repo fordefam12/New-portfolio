@@ -85,6 +85,21 @@
         content: 'CONTACT';
       }
     }
+    a.Resume-link {
+      &:after {
+        content: 'Resume';
+      }
+    }
+    a.Profile-link {
+      &:after {
+        content: 'Profile';
+      }
+    }
+    a.TBD-link {
+      &:after {
+        content: 'tbd';
+      }
+    }
 
     a.active {
       svg {

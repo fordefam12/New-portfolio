@@ -4,7 +4,7 @@ import './index.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
-import { Dna } from 'react-loader-spinner'
+
 // 'f', 'u', 'l', 'l','s', 't', 'a', 'c', 'k',
 
 const Home = () => {
@@ -51,6 +51,8 @@ const Home = () => {
             <span className={`${letterClass} _16`}>h</span>
             <span className={`${letterClass} _17`}>e</span>
             <img src={LogoTitle} alt="developer" />
+            
+
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
@@ -70,16 +72,8 @@ const Home = () => {
         </div>
         <Logo />
       </div>
-      <div className="Dna">
-        <Dna
-          visible={true}
-          height="800"
-          width="1800"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper"
-        />
-      </div>
+      
+      
     </>
   )
 }

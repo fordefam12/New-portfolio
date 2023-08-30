@@ -3,7 +3,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
-import { Dna } from 'react-loader-spinner'
+
 // import InputPrompt from 'inquirer/lib/prompts/input'
 
 const Contact = () => {
@@ -41,20 +41,12 @@ const Contact = () => {
   }
   return (
     <>
-      <div className="Dna"><Dna
-          visible={true}
-          height="800"
-          width="1800"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper"
-        /></div>
       <div className="container contact-page ">
         <div className="text-zone">
           <h1>
             <div className="glitch">
               <AnimatedLetters
-                strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'M', 'e']}
+                strArray={['C', 'o', 'n', 't', 'a', 'c', 't',' ', 'M', 'e']}
                 letterClass={letterClass}
                 idx={15}
               />
