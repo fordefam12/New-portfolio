@@ -24,7 +24,7 @@ const projects = [
     languages: "javascript, html, css",
     packages: "N/A",
     image:
-      "https://github.com/fordefam12/weatherDashboard/blob/main/weather%20dashboard.png?raw=true c:Users\fordeDownloadsYour paragraph text.png",
+      "https://github.com/fordefam12/weatherDashboard/blob/main/weather%20dashboard%20(1).png?raw=true c:Users\fordeDownloadsYour paragraph text.png",
     description:
       "This project is a weather dashboard that allows users to search for weather information for different locations. It provides current weather conditions as well as a 5-day forecast. The project was built using JavaScript, HTML, and CSS.",
     repo: "https://github.com/fordefam12/weatherDashboard",
@@ -48,7 +48,7 @@ const projects = [
     languages: "javascript, html, css",
     packages: "Unknown",
     image:
-      "https://github.com/fordefam12/gameBox/blob/main/images/project-1%20readme%20photo.PNG?raw=true",
+      "https://github.com/fordefam12/gameBox/blob/main/images/GameBox%20(2).png?raw=true",
     description:
       "Game Box is a game collection library built using JavaScript, HTML, and CSS. It includes classic games like Snake, Tetris, and Pong.",
     repo: "https://github.com/fordefam12/gameBox",

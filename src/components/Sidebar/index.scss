@@ -46,14 +46,14 @@
       }
 
       &:hover {
-        color: #ff0000;
+        color: #c50000;
 
         svg {
           opacity: 0;
         }
 
         &:after {
-          opacity: 1;
+          opacity: 2;
         }
       }
       &:after {
@@ -87,19 +87,29 @@
     }
     a.Resume-link {
       &:after {
-        content: 'Resume';
+        content: 'RESUME';
       }
     }
     a.Profile-link {
       &:after {
-        content: 'Profile';
+        content: 'PROFILE';
       }
     }
-    a.TBD-link {
+    a.Projects-link {
       &:after {
-        content: 'tbd';
+        content: 'PROJECTS';
       }
     }
+    a.Testing-link {
+      &:after {
+        content: 'TESTING';
+      }
+    }
+    // a.TBD-link {
+    //   &:after {
+    //     content: 'tbd';
+    //   }
+    // }
 
     a.active {
       svg {

@@ -1,14 +1,22 @@
-import './index.scss'
-import { Link, NavLink } from 'react-router-dom'
-import LogoS from '../../assets/images/Gear_5_Infobox.png'
-import logoSubtitle from '../../assets/images/digital_spaceCity_logo-removebg-preview.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBaby, faBoltLightning, faEnvelope, faHome, faProjectDiagram, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
+import "./index.scss";
+import { Link, NavLink } from "react-router-dom";
+import LogoS from "../../assets/images/Gear_5_Infobox.png";
+import logoSubtitle from "../../assets/images/digital_spaceCity_logo-removebg-preview.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBaby,
+  faBoltLightning,
+  faEnvelope,
+  faHome,
+  faProjectDiagram,
+  faSearch,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faInstagram,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons'
+} from "@fortawesome/free-brands-svg-icons";
 
 const Sidebar = () => (
   <div className="nav-bar">
@@ -20,7 +28,12 @@ const Sidebar = () => (
       <NavLink exact="true" activeclassname="active" to="/">
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
       </NavLink>
-      <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="about-link"
+        to="/about"
+      >
         <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
       </NavLink>
       <NavLink
@@ -31,18 +44,38 @@ const Sidebar = () => (
       >
         <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
       </NavLink>
-      <NavLink exact="true" activeclassname="active" className="Profile-link" to="/Profile">
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="Profile-link"
+        to="/Profile"
+      >
         <FontAwesomeIcon icon={faProjectDiagram} color="#4d4d4e" />
       </NavLink>
-      <NavLink exact="true" activeclassname="active" className="Resume-link" to="/Resume">
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="Resume-link"
+        to="/Resume"
+      >
         <FontAwesomeIcon icon={faSearch} color="#4d4d4e" />
       </NavLink>
-      <NavLink exact="true" activeclassname="active" className="TBD-link" to="/Projects">
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="Projects-link"
+        to="/Projects"
+      >
         <FontAwesomeIcon icon={faBoltLightning} color="#4d4d4e" />
-      </NavLink><NavLink exact="true" activeclassname="active" className="TBD-link" to="/error">
+      </NavLink>
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="Testing-link"
+        to="/Testing"
+      >
         <FontAwesomeIcon icon={faBaby} color="#4d4d4e" />
       </NavLink>
-      
     </nav>
     <ul>
       <li>
@@ -74,6 +107,6 @@ const Sidebar = () => (
       </li>
     </ul>
   </div>
-)
+);
 
-export default Sidebar
+export default Sidebar;
