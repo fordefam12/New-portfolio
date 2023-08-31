@@ -8,7 +8,7 @@ import Resume from './components/Resume/Resume'
 import Profile from './components/Porftolio/Profile' 
 import ParticlesContainer from './components/particles/ParticlesContainer'
 import Projects from './components/Projects/Projects'
-import Testing from './components/TestingPage/Testing'
+import Testing from './components/TestingPage/Testing.jsx'
 // import MagicGrid from './components/Projects/Projects'
 // import ErrorPage from './components/Error'
 

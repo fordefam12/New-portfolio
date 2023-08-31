@@ -18,6 +18,11 @@ function Testing() {
         data-aos="fade-in"
         data-aos-duration="2000"
       >
+        <div className='spherespinner'>
+            <div className='sphere'>
+
+            </div>
+        </div>
         <h3 className="name">Your name</h3>
         <h1 className="designation">Freelance graphic designer</h1>
         <p className="tagline">If youre a writer or something else, change the title as per your profession.</p>
@@ -33,9 +38,7 @@ function Testing() {
       >
         <h2>We bring your <span className="bold">ideas</span> to life<span className="orange">.</span></h2>
         <p>Consectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esseConsectetur adipisicing elit fugiat ratione laboriosam nostrum atque. Accusantium atque molestias amet culpa, quam illo porro, cupiditate repellendus explicabo sunt natus voluptate fugit ducimus esse</p>
-        <div className="stage-cube-cont">
-          <div className="cudespinner "></div>
-          </div>
+        
       </div>
     </section>
 
@@ -75,7 +78,6 @@ function Testing() {
         {/* Footer content */}
       </footer>
 
-      <script src="js/script.js"></script>
     </div>
   )
 }
