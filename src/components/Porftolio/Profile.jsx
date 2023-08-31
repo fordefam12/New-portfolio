@@ -109,7 +109,7 @@ const Profile = () => {
         <h1>
           <div className="glitch">
             <AnimatedLetters
-              strArray={['P', 'r', 'o', 'j', 'e', 'c', 't', 's']}
+              strArray={['P', 'r', 'o', 'f', 'i', 'l', 'e',]}
               letterClass={letterClass}
               idx={15}
             />
