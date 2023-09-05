@@ -59,7 +59,7 @@ Any questions about this project please send me a message on *https://github.com
 ## URL
   
   <p align='center'>
-<a href='https://main--peppy-begonia-b8069b.netlify.app/'>
+<a href='https://main--brandon-forde-portfolio.netlify.app//'>
 CLICK QR CODE for deploy link
 <img src='./src/assets/qr-code (13) (1).png' width="25%"></a>
 </p>
