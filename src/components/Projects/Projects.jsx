@@ -111,7 +111,7 @@ const Projects = () => {
     };
   }, []);
   const shuffledProjects = shuffleArray(projects);
-  const duplicatedProjects = duplicateArray(shuffledProjects, 10); // Adjust the number of duplicates as needed
+  const duplicatedProjects = duplicateArray(shuffledProjects, 15); // Adjust the number of duplicates as needed
 
   return (
     <div className="projects-page">
