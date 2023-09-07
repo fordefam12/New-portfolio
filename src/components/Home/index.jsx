@@ -4,6 +4,7 @@ import "./index.scss";
 import { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters";
 import Logo from "./Logo";
+// import TextSphere from "../TestingPage/TextSphere";
 
 // 'f', 'u', 'l', 'l','s', 't', 'a', 'c', 'k',
 
@@ -50,6 +51,7 @@ const Home = () => {
 
   return (
     <>
+    {/* < TextSphere /> */}
       <div className="container home-page">
         <div className="text-zone">
           <h1>

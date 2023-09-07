@@ -1,118 +1,136 @@
 .Testing-page {
-    position:absolute;
-    left: 100px;
-    transform: translateY(-30%);
-    top: 50%;
-    width: 35%;
-    vertical-align: middle;
-    display: table-cell;
-    max-height: 90%;
-    overflow: scroll;
-    z-index: 2;
-  
-    .banner--content {
-        font-size: 53px;
-        font-family:'hCoolvetica';
-        color: rgb(107, 103, 103);
-        font-weight: 400;
-        margin-top: 0;
-        position: relative;
-        margin-bottom: 40px;
-        left: 10px;
-  
+  position: absolute;
+  left: 100px;
+  transform: translateY(-30%);
+  top: 50%;
+  width: 35%;
+  vertical-align: middle;
+  display: table-cell;
+  max-height: 90%;
+  overflow: scroll;
+  z-index: 2;
+
+  .banner--content {
+    font-size: 53px;
+    font-family: "hCoolvetica";
+    color: rgb(107, 103, 103);
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 40px;
+    left: 10px;
+  }
+
+  .promo .content {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+
+    .bold {
+      font-weight: bold;
     }
-  
-    .promo .content {
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      text-align: center;
-      margin-bottom: 20px;
+
+    .orange {
+      color: orange;
     }
-    h2 {
-        font-size: 28px;
-        margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .spherespinner {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    margin: 0 auto;
+
+    .sphere {
+      width: 40px;
+      height: 40px;
+      background-color: #3498db;
+      border-radius: 50%;
+      position: absolute;
+      transform-origin: center;
+      animation: spin 6s linear infinite;
+
+      &:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    16.67% {
+      transform: rotateY(60deg) rotateX(-90deg);
+    }
+    33.33% {
+      transform: rotateY(120deg) rotateX(0deg);
+    }
+    50% {
+      transform: rotateY(180deg) rotateX(90deg);
+    }
+    66.67% {
+      transform: rotateY(240deg) rotateX(180deg);
+    }
+    83.33% {
+      transform: rotateY(300deg) rotateX(90deg);
+    }
+  }
+}
+.tagcloud {
+  display: inline-block;
+  top: 0;
+  left: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 00625em;
+  font-size: 1.3em;
   
-        .bold {
-          font-weight: bold;
-        }
-  
-        .orange {
-          color: orange;
-        }
-      }
-  
-      p {
-        font-size: 18px;
-        line-height: 1.6;
-        color: #555;
-        margin-bottom: 20px;
-      }
-      .spherespinner {
-        width: 200px;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        perspective: 1200px;
-        margin: 0 auto;
-      
-        .sphere {
-          width: 40px;
-          height: 40px;
-          background-color: #3498db;
-          border-radius: 50%;
-          position: absolute;
-          transform-origin: center;
-          animation: spin 6s linear infinite;
-      
-          &:nth-child(1) {
-            animation-delay: 0.1s;
-          }
-      
-          &:nth-child(2) {
-            animation-delay: 0.2s;
-          }
-      
-          &:nth-child(3) {
-            animation-delay: 0.3s;
-          }
-      
-          &:nth-child(4) {
-            animation-delay: 0.4s;
-          }
-      
-          &:nth-child(5) {
-            animation-delay: 0.5s;
-          }
-      
-          &:nth-child(6) {
-            animation-delay: 0.6s;
-          }
-        }
-      }
-      
-      @keyframes spin {
-        0%,
-        100% {
-          transform: rotateY(0deg) rotateX(0deg);
-        }
-        16.67% {
-          transform: rotateY(60deg) rotateX(-90deg);
-        }
-        33.33% {
-          transform: rotateY(120deg) rotateX(0deg);
-        }
-        50% {
-          transform: rotateY(180deg) rotateX(90deg);
-        }
-        66.67% {
-          transform: rotateY(240deg) rotateX(180deg);
-        }
-        83.33% {
-          transform: rotateY(300deg) rotateX(90deg);
-        }
-      }
-      
+}
+.tagcloud--item {
+  color: aqua;
+  text-transform: uppercase;
+}
+.tagcloud--item:hover {
+  color: crimson;
+}
+.text-sphere {
+  float: right;
 }

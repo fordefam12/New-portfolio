@@ -66,6 +66,18 @@ const projects = [
     repo: "https://github.com/fordefam12/Plutus",
     live: "https://shielded-stream-48370-06cb0de7f892.herokuapp.com/",
   },
+  {
+    id: 5,
+    title: "Awristocrats",
+    languages: "javascript, react, scss, ",
+    packages: "Unknown",
+    image:
+      "https://github.com/fordefam12/Awristocrats/blob/main/Awristocrats%20(2).png",
+    description:
+      "The philosophy at Awristocrats is that a watch is not just a timekeeping device; it's a reflection of your unique personality and a symbol of your discerning taste. Their curated collection of exquisite luxury watches is designed to cater to your desire for the finest craftsmanship, precision, and unparalleled beauty.",
+    repo: "https://github.com/fordefam12/Awristocrats",
+    live: "https://arcane-caverns-68488-3502f0db0406.herokuapp.com/",
+  },
 ];
 
 const shuffleArray = (array) => {
