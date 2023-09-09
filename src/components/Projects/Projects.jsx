@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Projects.scss"; // Add your custom styles here
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-
+// import { animated } from 'react-spring';
 
 const projects = [
   {
@@ -80,6 +80,25 @@ const projects = [
   },
 ];
 
+const getRandomAnimationClass = () => {
+  const animationClasses = [
+    "flip",
+    "fadeIn",
+    "slideOut",
+    "bounce",
+    "slideIn",
+    "pulse",
+    "imageTransition",
+    "flash",
+    "bounceIn",
+    "bounceOut",
+    "lightSpeedIn",
+    "rotateIn",
+    "rollOut",
+  ];
+  return animationClasses[Math.floor(Math.random() * animationClasses.length)];
+};
+
 const shuffleArray = (array) => {
   const shuffled = array.slice();
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -98,40 +117,99 @@ const duplicateArray = (array, times) => {
 };
 
 const Projects = () => {
-  useEffect(() => {
-    const resizeHandler = () => {
-      // Update the magic grid container size here if needed
-    };
+  const [shuffledProjects, setShuffledProjects] = useState([]);
+  const [currentAnimationIndex, setCurrentAnimationIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState(null);
 
-    resizeHandler();
-    window.addEventListener("resize", resizeHandler);
+  useEffect(() => {
+    // Shuffle the projects array once at the beginning
+    const shuffled = shuffleArray(projects);
+    setShuffledProjects(duplicateArray(shuffled, 5)); // Adjust the number of duplicates as needed
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentAnimationIndex((prevIndex) =>
+        prevIndex === shuffledProjects.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change image every 4 seconds
 
     return () => {
-      window.removeEventListener("resize", resizeHandler);
+      clearInterval(interval);
     };
-  }, []);
-  const shuffledProjects = shuffleArray(projects);
-  const duplicatedProjects = duplicateArray(shuffledProjects, 15); // Adjust the number of duplicates as needed
+  }, [shuffledProjects]);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setIsModalOpen(false);
+  };
+  const handleProjectHover = (projectIndex) => {
+    setHoveredProject(projectIndex);
+
+    // Reset the hover effect after 5 seconds
+    setTimeout(() => {
+      setHoveredProject(null);
+    }, 2000);
+  };
 
   return (
     <div className="projects-page">
-      {duplicatedProjects.map((project, index) => (
-        <div key={index} className="magic-grid-item">
-          <div className="project">
-            <p>go to repo link for more info</p>
-            <img src={project.image} alt={project.title} />
-            <div className="project-links">
-              <h3>{project.title}</h3>
-              <a href={project.live} className="deploy-link">
-                <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
-              </a>
-              <a href={project.repo} className="repo-link">
-                <FontAwesomeIcon icon={faGithubAlt} /> Repo Link
-              </a>
-            </div>
+      <ul className="image-grid">
+        {shuffledProjects.map((project, index) => {
+          const animationClass =
+            index === currentAnimationIndex ? getRandomAnimationClass() : "";
+          const isHovered = index === hoveredProject;
+
+          return (
+            <li
+              className={`grid-item project ${animationClass} ${
+                isHovered ? "hovered" : ""
+              }`}
+              key={index}
+              onMouseEnter={() => handleProjectHover(index)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                onClick={() => openModal(project)}
+              />
+              <div className="project-links">
+                <h3>{project.title}</h3>
+                <a href={project.live} className="deploy-link">
+                  <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
+                </a>
+                <a href={project.repo} className="repo-link">
+                  <FontAwesomeIcon icon={faGithubAlt} /> Repo Link
+                </a>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* Modal */}
+      {isModalOpen && selectedProject && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
+            <h2>{selectedProject.title}</h2>
+            <p>{selectedProject.description}</p>
+            <a href={selectedProject.live} className="modal-deploy-link">
+              <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
+            </a>
           </div>
         </div>
-      ))}
+      )}
     </div>
   );
 };
