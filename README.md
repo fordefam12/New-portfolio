@@ -63,6 +63,8 @@ Any questions about this project please send me a message on *https://github.com
 CLICK QR CODE for deploy link
 <img src='./src/assets/qr-code (13) (1).png' width="25%"></a>
 </p>
-## Screenshots
 
-![screenshot](<src/assets/brandon's portfolio.png>)
+## Screenshots
+![scren](src/assets/BrandonsReactPortfolio.png)
+
+
