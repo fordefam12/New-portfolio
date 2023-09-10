@@ -3,6 +3,9 @@ import "./Projects.scss"; // Add your custom styles here
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+// import AnimatedResponsiveImageGrid from '@barkleyrei/animated-responsive-image-grid';
+
+
 // import { animated } from 'react-spring';
 
 const projects = [
@@ -124,9 +127,13 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   useEffect(() => {
+    const rows = 8; // Number of rows
+  const columns = 6; // Number of columns
+  const projectsToDisplay = rows * columns;
     // Shuffle the projects array once at the beginning
     const shuffled = shuffleArray(projects);
-    setShuffledProjects(duplicateArray(shuffled, 5)); // Adjust the number of duplicates as needed
+    const projectsSubset = shuffled.slice(0, projectsToDisplay);
+    setShuffledProjects(duplicateArray(projectsSubset, 5)); // Adjust the number of duplicates as needed
   }, []);
 
   useEffect(() => {
@@ -161,6 +168,10 @@ const Projects = () => {
 
   return (
     <div className="projects-page">
+      {/* <div className="my-image-grid">
+      <AnimatedResponsiveImageGrid images={projects.images} />
+    </div> */}
+      <div className="image-grid-container">
       <ul className="image-grid">
         {shuffledProjects.map((project, index) => {
           const animationClass =
@@ -169,7 +180,7 @@ const Projects = () => {
 
           return (
             <li
-              className={`grid-item project ${animationClass} ${
+              className={` grid-item project ${animationClass} ${
                 isHovered ? "hovered" : ""
               }`}
               key={index}
@@ -194,7 +205,7 @@ const Projects = () => {
           );
         })}
       </ul>
-
+      
       {/* Modal */}
       {isModalOpen && selectedProject && (
         <div className="modal">
@@ -210,6 +221,7 @@ const Projects = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };

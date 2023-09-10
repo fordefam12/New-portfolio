@@ -14,22 +14,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   z-index: 5;
 }
-/* .Dna {
-  display: block;
-  position: absolute;
-  margin: auto;
-  width: 500px;
-  height: 500px;
-  animation: fadeOut 1s 1s ;
-  animation-fill-mode: forwards;
 
-} */
+@media screen and (max-width: 1200px){
+  body{
+    overflow: visible;
+  }
+}
+
 @media (max-width: 768px) {
   /* Mobile styles */
+  body{
+    overflow: visible;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Tablet styles */
+  body{
+    overflow: visible;
+  }
 }
 
 

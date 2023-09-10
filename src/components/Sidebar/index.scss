@@ -15,7 +15,7 @@
       display: block;
       margin: 8px auto;
       width: 60px;
-      height:auto;
+      height: auto;
 
       &.sub-logo {
         width: 60px;
@@ -57,7 +57,7 @@
         }
       }
       &:after {
-        content: '';
+        content: "";
         font-size: 9px;
         letter-spacing: 2px;
         position: absolute;
@@ -71,38 +71,38 @@
 
       &:first-child {
         &::after {
-          content: 'HOME';
+          content: "HOME";
         }
       }
     }
     a.about-link {
       &:after {
-        content: 'ABOUT';
+        content: "ABOUT";
       }
     }
     a.contact-link {
       &:after {
-        content: 'CONTACT';
+        content: "CONTACT";
       }
     }
     a.Resume-link {
       &:after {
-        content: 'RESUME';
+        content: "RESUME";
       }
     }
     a.Profile-link {
       &:after {
-        content: 'PROFILE';
+        content: "PROFILE";
       }
     }
     a.Projects-link {
       &:after {
-        content: 'PROJECTS';
+        content: "PROJECTS";
       }
     }
     a.Testing-link {
       &:after {
-        content: 'TESTING';
+        content: "TESTING";
       }
     }
     // a.TBD-link {
@@ -128,17 +128,57 @@
     margin: 0;
 
     li {
-      a{
+      a {
         padding: 7px 0;
         display: block;
         font-size: 15px;
         line-height: 16px;
 
-        &:hover svg{
+        &:hover svg {
           color: #00eeff;
         }
-      } 
+      }
     }
-
   }
+}
+@media screen and (max-width: 1200px) {
+  .nav-bar {
+    background: transparent;
+    position: initial;
+    height: auto;
+    min-height: auto;
+    z-index: 2;
+    a {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  }
+  a:after {
+  opacity: 1;
+  }
+  }
+  ul,
+  nav {
+    display: none;
+  }
+  Nav {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #18181818;
+    z-index: 2;
+    
+    left: -180px;
+    // position: absolute;
+    margin: 0;
+  
+  a {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  }
+  a:after {
+  opacity: 1;
+  }
+}
 }

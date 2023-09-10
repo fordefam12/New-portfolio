@@ -68,7 +68,7 @@
   }
 
   &:hover {
-    transform: rotateY(360deg);
+    transform: rotateZ(360deg);
     z-index: 1;
     animation-duration: 2ms;
 
@@ -87,14 +87,29 @@
     }
   }
   /* Add a new class for the hovered state */
-.project.hovered {
-  transform: rotateY(360deg);
-  z-index: 1;
-  animation-duration: 2ms;
-}
+  .project:hover {
+    transform: rotateY(360deg);
+    z-index: 1;
+    animation-duration: 2ms;
+  
+    h3 {
+      opacity: 1;
+      z-index: 2;
+    }
+  
+    p {
+      opacity: 1;
+      z-index: 2;
+    }
+    a {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+  
 }
 ul.image-grid {
-    // margin: auto;
+    margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for small screens */
   }
   
@@ -132,12 +147,29 @@ img {
     }
   }
 }
+.image-grid-container {
+  height: 400px; /* Adjust the height as needed */
+  
+}
 
 .image-grid {
-
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Show 5 images per row */
-  animation: randomTransition 4s infinite;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // gap: 20px; /* Adjust the gap between grid items */
+  // max-width: 100%;
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
 }
 
 .grid-item {
@@ -147,12 +179,6 @@ img {
   cursor: pointer;
   transform-origin: center center;
   transition: transform 0.5s ease;
-}
-
-.grid-item img {
-  max-width: 100%;
-  height: 90%;
-  display: block;
 }
 
 .animated {
