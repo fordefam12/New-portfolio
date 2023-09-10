@@ -1,4 +1,5 @@
 import "./index.scss"; // Import your custom styles here
+import resume from "../../assets/brandonForde.pdf";
 
 export default function Resume() {
   return (
@@ -6,9 +7,10 @@ export default function Resume() {
       <h1 className="resume-title">Resume</h1>
       <a
         className="resume-download"
-        href="src\assets\brandonForde.pdf"
+        href={resume}
         target="_blank"
         rel="noopener noreferrer"
+        download
       >
         Download Resume
       </a>
@@ -64,19 +66,19 @@ export default function Resume() {
           <li className="face21">JSON</li>
           <li className="face22">AJAX (Fetch API)</li>
           <li className="face23">HTTP request methods</li>
-          <li className='face24'>GraphQL</li>
+          <li className="face24">GraphQL</li>
         </ul>
       </div>
       <div className="skills-section spherespinner">
         <h2 className="skills-subtitle sphere">Deployment and Delivery</h2>
         <ul className="skills-list face6">
-          <li className='face25'>Heroku</li>
-          <li className='face26'>Git</li>
-          <li className='face26'>GitHub Pages</li>
-          <li className='face27'>Shell Scripting</li>
-          <li className='face28'>Unit Testing</li>
-          <li className='face29'>Linting</li>
-          <li className='face30'>Continuous Integration</li>
+          <li className="face25">Heroku</li>
+          <li className="face26">Git</li>
+          <li className="face26">GitHub Pages</li>
+          <li className="face27">Shell Scripting</li>
+          <li className="face28">Unit Testing</li>
+          <li className="face29">Linting</li>
+          <li className="face30">Continuous Integration</li>
         </ul>
       </div>
     </div>
