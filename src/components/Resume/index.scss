@@ -1,9 +1,13 @@
+html {
+  overflow: scroll;
+}
 .resume-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     position: relative;
     z-index: 2;
+   
     
   }
   
@@ -44,174 +48,71 @@
     overflow-y: auto; /* Enable vertical scrolling when content overflows */
     margin-bottom: 20px; /* Add some spacing at the bottom */
   }
-  // .spherespinner {
-  //   width: 200px;
-  //   height: 200px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   perspective: 1200px;
-  //   margin: 0 auto;
-  //   transform-style: preserve-3d;
-  
-  //   .sphere {
-  //     width: 40px;
-  //     height: 400px;
-  //     background-color: #3498db;
-  //     border-radius: 50%;
-  //     position: absolute;
-  //     transform-origin: center;
-  //     animation: spin 12s linear infinite;
-  //     ul li {
-  //       position: absolute;
-  //       width: 200px;
-  //       height: 200px;
-  //       border: 2px solid #ffffff;
-  //       background: rgba(168, 164, 164, 0.4);
-  //       text-align: center;
-  //       font-size: 100px;
-  //       display: flex;
-  //       justify-content: center;
-  //       align-items: center;
-  //       box-shadow: 0 0 25px 0px lightblue;
-  //     }
-  
-  //     &face1 {
-  //       animation-delay: 0.1s;
-  //       position: absolute;
-  //   width: 200px;
-  //   height: 200px;
-  //   border: 2px solid #ffffff;
-  //   background: rgba(168, 164, 164, 0.4);
-  //   text-align: center;
-  //   font-size: 100px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   box-shadow: 0 0 25px 0px lightblue;
-  //     }
-  
-  //     &face2 {
-  //       animation-delay: 0.2s;
-  //       position: absolute;
-  //   width: 200px;
-  //   height: 200px;
-  //   border: 2px solid #ffffff;
-  //   background: rgba(168, 164, 164, 0.4);
-  //   text-align: center;
-  //   font-size: 100px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   box-shadow: 0 0 25px 0px lightblue;
-  //     }
-  
-  //     &face3 {
-  //       animation-delay: 0.3s;
-  //     }
-  
-  //     &face4 {
-  //       animation-delay: 0.4s;
-  //     }
-  
-  //     &face5 {
-  //       animation-delay: 0.5s;
-  //     }
-  
-  //     &face6 {
-  //       animation-delay: 0.6s;
-  //     }
-      
-  //     &face7 {
-  //       animation-delay: 0.7s;
-  //     }
-  
-  //     &face8 {
-  //       animation-delay: 0.8s;
-  //     }
-  
-  //     &face10 {
-  //       animation-delay: 0.9s;
-  //     }
-  
-  //     &face11 {
-  //       animation-delay: 1s;
-  //     }
-  
-  //     &face12 {
-  //       animation-delay: 1.2s;
-  //     }
-  
-  //     &face13 {
-  //       animation-delay: 1.3s;
-  //     }
-      
-  //     &face14 {
-  //       animation-delay: 1.4s;
-  //     }
-  
-  //     &face15 {
-  //       animation-delay: 1.5s;
-  //     }
-  
-  //     &face16 {
-  //       animation-delay: 1.6s;
-  //     }
-  
-  //     &face17 {
-  //       animation-delay: 1.7s;
-  //     }
-  
-  //     &face18 {
-  //       animation-delay: 1.8s;
-  //     }
-  
-  //     &face19 {
-  //       animation-delay: 1.9s;
-  //     }
-      
-  //     &face20 {
-  //       animation-delay: 2s;
-  //     }
-  
-  //     &face21 {
-  //       animation-delay: 2.2s;
-  //     }
-  
-  //     &face22 {
-  //       animation-delay: 2.3s;
-  //     }
-  
-  //     &face23 {
-  //       animation-delay: 2.4s;
-  //     }
-  
-  //     &face24 {
-  //       animation-delay: 2.5s;
-  //     }
-  
-  //     &face25 {
-  //       animation-delay: 2.6s;
-  //     }
-  //   }
-  // }
-  
-  // @keyframes spin {
-  //   0%, 100% {
-  //     transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
-  //   }
-  //   20% {
-  //     transform: rotateY(72deg) rotateX(20deg) rotateZ(-30deg);
-  //   }
-  //   40% {
-  //     transform: rotateY(144deg) rotateX(40deg) rotateZ(-60deg);
-  //   }
-  //   60% {
-  //     transform: rotateY(216deg) rotateX(20deg) rotateZ(-90deg);
-  //   }
-  //   80% {
-  //     transform: rotateY(288deg) rotateX(40deg) rotateZ(-120deg);
-  //   }
-  // }
+/* Add these styles to your existing SCSS file or import a new CSS file */
 
-  
+/* Modify the perspective and animation properties for globe effect */
+.resume-container {
+  perspective: 1000px;
+}
+
+.spherespinner {
+  animation-name: spinsphere;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  margin-left: calc(50% - 100px);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* Adjust the sphere's faces for globe effect */
+.skills-list.sphere li {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ffffff;
+  background: rgba(168, 164, 164, 0.4);
+  text-align: center;
+  font-size: 24px; /* Adjust font size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 25px 0px lightblue;
+  border-radius: 50%;
+  transform: rotateY(0deg) rotateX(90deg) translateZ(100px);
+}
+
+/* Define keyframes for spinning globe */
+@keyframes spinsphere {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 20px; /* Add some padding for better spacing on smaller screens */
+  }
+
+  .skills-section {
+    margin-bottom: 20px; /* Add margin between sections on smaller screens */
+  }
+
+  .skills-subtitle {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .skills-list li {
+    font-size: 14px; /* Adjust font size for list items on smaller screens */
+    margin-bottom: 8px; /* Add margin between list items on smaller screens */
+  }
+}

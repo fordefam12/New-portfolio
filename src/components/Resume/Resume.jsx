@@ -26,9 +26,7 @@ export default function Resume() {
           <li className="face4">Big O Notation</li>
           <li className="face5">Data Structures</li>
         </ul>
-      </div>
 
-      <div className="skills-section spherespinner">
         <h2 className="skills-subtitle ">Browser Based Technologies</h2>
         <ul className="skills-list sphere">
           <li className="face6">HTML/CSS</li>
@@ -39,15 +37,13 @@ export default function Resume() {
           <li className="face11">Local Storage, Session Storage, IndexedDB</li>
           <li className="face12">React.js</li>
         </ul>
-      </div>
-      <div className="skills-section spherespinner">
+
         <h2 className="skills-subtitle sphere">Databases</h2>
         <ul className="skills-list face3">
           <li className="face13">MySQL</li>
           <li className="face14">MongoDB</li>
         </ul>
-      </div>
-      <div className="skills-section spherespinner">
+
         <h2 className="skills-subtitle sphere">Server Side Development</h2>
         <ul className="skills-list face4">
           <li className="face15">User Authentication</li>
@@ -56,8 +52,7 @@ export default function Resume() {
             MERN Stack (MongoDB, Express.js, React.js, Node.js)
           </li>
         </ul>
-      </div>
-      <div className="skills-section spherespinner">
+
         <h2 className="skills-subtitle sphere">API Design</h2>
         <ul className="skills-list face5">
           <li className="face18">Client-Server Model</li>
@@ -68,8 +63,7 @@ export default function Resume() {
           <li className="face23">HTTP request methods</li>
           <li className="face24">GraphQL</li>
         </ul>
-      </div>
-      <div className="skills-section spherespinner">
+
         <h2 className="skills-subtitle sphere">Deployment and Delivery</h2>
         <ul className="skills-list face6">
           <li className="face25">Heroku</li>

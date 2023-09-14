@@ -2,7 +2,7 @@
     margin: 0 20px ;
     position: relative;
     z-index: 2;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 3s;
     animation-duration: 10s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
@@ -16,9 +16,11 @@
 //   padding: 1px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s, z-index 0.5s;
-  transform-style: preserve-3d;
+  // transform-style: preserve-3d;
+  width: 100%;
 //   width: 80%;
 //   height: 80%;
+
 
   h3 {
     position: absolute;
@@ -111,6 +113,7 @@
 ul.image-grid {
     margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for small screens */
+    
   }
   
   @media (min-width: 768px) {
@@ -149,6 +152,7 @@ img {
 }
 .image-grid-container {
   height: 400px; /* Adjust the height as needed */
+  object-fit: cover;
   
 }
 
@@ -179,11 +183,14 @@ img {
   cursor: pointer;
   transform-origin: center center;
   transition: transform 0.5s ease;
+  
 }
-
+.grid-item img {
+  object-fit: cover;
+}
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -196,7 +203,7 @@ img {
   animation-duration: 2s;
 }
 /* Add these styles for the modal */
-.modal {
+ .modal {
     display: none;
     position: fixed;
     z-index: 9999;
@@ -206,7 +213,7 @@ img {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
-  }
+  
   
   .modal-content {
     background-color: #fff;
@@ -256,7 +263,7 @@ img {
   .modal-deploy-link:hover {
     background-color: #0056b3;
   }
-  
+}  
 @-webkit-keyframes bounce {
   0%,
   100%,
@@ -3228,4 +3235,412 @@ img {
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .project {
+    width: 50%;
+  }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+  .project {
+    width: 100%;
+  }
+  }
+  .fadeInOut {
+    /* Define your fadeInOut animation here */
+    animation: fadeInOut 3s ease-in-out infinite;
+  }
+  
+  .slideLeft {
+    /* Define your slideLeft animation here */
+    animation: slideLeft 3s ease-in-out infinite;
+  }
+  
+  /* Define other animation classes and their animations similarly */
+  /* Fade In and Out */
+.fadeInOut {
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+/* Slide In from Left */
+.slideLeft {
+  animation: slideLeft 3s ease-in-out infinite;
+}
+
+/* Slide In from Right */
+.slideRight {
+  animation: slideRight 3s ease-in-out infinite;
+}
+
+/* Slide In from Top */
+.slideTop {
+  animation: slideTop 3s ease-in-out infinite;
+}
+
+/* Slide In from Bottom */
+.slideBottom {
+  animation: slideBottom 3s ease-in-out infinite;
+}
+
+/* Rotate Left */
+.rotateLeft {
+  animation: rotateLeft 3s ease-in-out infinite;
+}
+
+/* Rotate Right */
+.rotateRight {
+  animation: rotateRight 3s ease-in-out infinite;
+}
+
+/* Rotate from Top */
+.rotateTop {
+  animation: rotateTop 3s ease-in-out infinite;
+}
+
+/* Rotate from Bottom */
+.rotateBottom {
+  animation: rotateBottom 3s ease-in-out infinite;
+}
+
+/* Scale */
+.scale {
+  animation: scale 3s ease-in-out infinite;
+}
+
+/* 3D Rotation */
+.rotate3d {
+  animation: rotate3d 3s ease-in-out infinite;
+}
+
+/* Rotate Left with Scaling */
+.rotateLeftScale {
+  animation: rotateLeftScale 3s ease-in-out infinite;
+}
+
+/* Rotate Right with Scaling */
+.rotateRightScale {
+  animation: rotateRightScale 3s ease-in-out infinite;
+}
+
+/* Rotate from Top with Scaling */
+.rotateTopScale {
+  animation: rotateTopScale 3s ease-in-out infinite;
+}
+
+/* Rotate from Bottom with Scaling */
+.rotateBottomScale {
+  animation: rotateBottomScale 3s ease-in-out infinite;
+  /* CSS for flip animation */
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(90deg); /* Start with the page turned away */
+    opacity: 0; /* Start with opacity 0 to fade in */
+  }
+  50% {
+    transform: perspective(400px) rotateY(45deg); /* Halfway, partially turned */
+    opacity: 0.5; /* Opacity partially increased */
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg); /* Fully turned towards viewer */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+}
+/* CSS for fadeInOut animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* CSS for slideLeft animation */
+@keyframes slideLeft {
+  0% {
+    left: 100%; /* Start off the screen to the right */
+  }
+  100% {
+    left: 0; /* Slide in to the left */
+  }
+}
+
+/* CSS for slideRight animation */
+@keyframes slideRight {
+  0% {
+    left: -100%; /* Start off the screen to the left */
+  }
+  100% {
+    left: 0; /* Slide in to the right */
+  }
+}
+
+/* CSS for slideTop animation */
+@keyframes slideTop {
+  0% {
+    top: 100%; /* Start off the screen at the bottom */
+  }
+  100% {
+    top: 0; /* Slide in from the top */
+  }
+}
+
+/* CSS for slideBottom animation */
+@keyframes slideBottom {
+  0% {
+    top: -100%; /* Start off the screen at the top */
+  }
+  100% {
+    top: 0; /* Slide in from the bottom */
+  }
+}
+
+/* CSS for rotateLeft animation */
+@keyframes rotateLeft {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/* CSS for rotateRight animation */
+@keyframes rotateRight {
+  0% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/* CSS for rotateTop animation */
+@keyframes rotateTop {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/* CSS for rotateBottom animation */
+@keyframes rotateBottom {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/* CSS for scale animation */
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* CSS for rotateLeftScale animation */
+@keyframes rotateLeftScale {
+  0% {
+    transform: scale(0.3) rotateY(90deg);
+  }
+  100% {
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+/* CSS for rotateRightScale animation */
+@keyframes rotateRightScale {
+  0% {
+    transform: scale(0.3) rotateY(-90deg);
+  }
+  100% {
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+/* CSS for rotateTopScale animation */
+@keyframes rotateTopScale {
+  0% {
+    transform: scale(0.3) rotateX(90deg);
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+/* CSS for rotateBottomScale animation */
+@keyframes rotateBottomScale {
+  0% {
+    transform: scale(0.3) rotateX(-90deg);
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+/* CSS for rotate3d animation */
+@keyframes rotate3d {
+  0% {
+    transform: rotate3d(1, 1, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 0, 0deg);
+  }
+}
+@keyframes fadeIn3d {
+  0% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+@keyframes fadeOut3d {
+  0% {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(-90deg);
+  }
+}
+@keyframes slideLeft3d {
+  0% {
+    transform: perspective(400px) translateX(100%);
+  }
+  100% {
+    transform: perspective(400px) translateX(0%);
+  }
+}
+@keyframes slideRight3d {
+  0% {
+    transform: perspective(400px) translateX(-100%);
+  }
+  100% {
+    transform: perspective(400px) translateX(0%);
+  }
+}
+@keyframes slideTop3d {
+  0% {
+    transform: perspective(400px) translateY(100%);
+  }
+  100% {
+    transform: perspective(400px) translateY(0%);
+  }
+}
+@keyframes slideBottom3d {
+  0% {
+    transform: perspective(400px) translateY(-100%);
+  }
+  100% {
+    transform: perspective(400px) translateY(0%);
+  }
+}
+@keyframes rotateLeft3d {
+  0% {
+    transform: perspective(400px) rotateY(90deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+@keyframes rotateRight3d {
+  0% {
+    transform: perspective(400px) rotateY(-90deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+@keyframes rotateTop3d {
+  0% {
+    transform: perspective(400px) rotateX(90deg);
+  }
+  100% {
+    transform: perspective(400px) rotateX(0deg);
+  }
+}
+@keyframes rotateBottom3d {
+  0% {
+    transform: perspective(400px) rotateX(-90deg);
+  }
+  100% {
+    transform: perspective(400px) rotateX(0deg);
+  }
+}
+@keyframes scale3d {
+  0% {
+    transform: perspective(400px) scale(0);
+  }
+  100% {
+    transform: perspective(400px) scale(1);
+  }
+}
+@keyframes rotateLeftScale3d {
+  0% {
+    transform: perspective(400px) scale(0.3) rotateY(90deg);
+  }
+  100% {
+    transform: perspective(400px) scale(1) rotateY(0deg);
+  }
+}
+@keyframes rotateRightScale3d {
+  0% {
+    transform: perspective(400px) scale(0.3) rotateY(-90deg);
+  }
+  100% {
+    transform: perspective(400px) scale(1) rotateY(0deg);
+  }
+}
+@keyframes rotateTopScale3d {
+  0% {
+    transform: perspective(400px) scale(0.3) rotateX(90deg);
+  }
+  100% {
+    transform: perspective(400px) scale(1) rotateX(0deg);
+  }
+}
+@keyframes rotateBottomScale3d {
+  0% {
+    transform: perspective(400px) scale(0.3) rotateX(-90deg);
+  }
+  100% {
+    transform: perspective(400px) scale(1) rotateX(0deg);
+  }
+}
+/* Projects.scss */
+/* Existing styles */
+
+/* Add media query for mobile devices */
+@media (max-width: 768px) {
+  .image-grid-container {
+    padding: 10px; /* Add some padding for better spacing on smaller screens */
+  }
+
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .grid-item {
+    width: calc(50% - 20px); /* Adjust the width for smaller screens */
+    margin: 10px;
+  }
 }

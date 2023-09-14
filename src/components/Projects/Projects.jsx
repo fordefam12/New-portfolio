@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+// import  { Component } from 'react';
+import "../../js/AnimatedResponsiveImageGrid/css/demo.css";
+import "../../js/AnimatedResponsiveImageGrid/css/fallback.css";
+import "../../js/AnimatedResponsiveImageGrid/css/style.css";
+
 import "./Projects.scss"; // Add your custom styles here
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 // import AnimatedResponsiveImageGrid from '@barkleyrei/animated-responsive-image-grid';
-
 
 // import { animated } from 'react-spring';
 
@@ -85,22 +89,41 @@ const projects = [
 
 const getRandomAnimationClass = () => {
   const animationClasses = [
-    "flip",
     "fadeIn",
-    "slideOut",
-    "bounce",
-    "slideIn",
-    "pulse",
-    "imageTransition",
-    "flash",
-    "bounceIn",
-    "bounceOut",
-    "lightSpeedIn",
-    "rotateIn",
-    "rollOut",
+    "fadeOut",
+    "slideLeft",
+    "slideRight",
+    "slideTop",
+    "slideBottom",
+    "rotateLeft",
+    "rotateRight",
+    "rotateTop",
+    "rotateBottom",
+    "rotate3d",
+    "rotateLeftScale",
+    "rotateRightScale",
+    "rotateTopScale",
+    "rotateBottomScale",
+    'fadeIn3d',
+    "fadeOut3d",
+    "slideLeft3d",
+    "slideRight3d",
+    "slideTop3d",
+    "slideBottom3d",
+    "rotateLeft3d",
+    "rotateRight3d",
+    "rotateTop3d",
+    "rotateBottom3d",
+    "scale3d",
+    "rotate3d",
+    "rotateLeftScale3d",
+    "rotateRightScale3d",
+    "rotateTopScale3d",
+    "rotateBottomScale3d",
   ];
   return animationClasses[Math.floor(Math.random() * animationClasses.length)];
 };
+
 
 const shuffleArray = (array) => {
   const shuffled = array.slice();
@@ -128,8 +151,9 @@ const Projects = () => {
 
   useEffect(() => {
     const rows = 8; // Number of rows
-  const columns = 6; // Number of columns
-  const projectsToDisplay = rows * columns;
+    const columns = 6; // Number of columns
+    const projectsToDisplay = rows * columns;
+
     // Shuffle the projects array once at the beginning
     const shuffled = shuffleArray(projects);
     const projectsSubset = shuffled.slice(0, projectsToDisplay);
@@ -141,7 +165,7 @@ const Projects = () => {
       setCurrentAnimationIndex((prevIndex) =>
         prevIndex === shuffledProjects.length - 1 ? 0 : prevIndex + 1
       );
-    }, 4000); // Change image every 4 seconds
+    }, 3000); // Change image every 4 seconds
 
     return () => {
       clearInterval(interval);
@@ -157,71 +181,69 @@ const Projects = () => {
     setSelectedProject(null);
     setIsModalOpen(false);
   };
+
   const handleProjectHover = (projectIndex) => {
     setHoveredProject(projectIndex);
 
     // Reset the hover effect after 5 seconds
     setTimeout(() => {
       setHoveredProject(null);
-    }, 2000);
+    }, 5000);
   };
 
   return (
     <div className="projects-page">
-      {/* <div className="my-image-grid">
-      <AnimatedResponsiveImageGrid images={projects.images} />
-    </div> */}
       <div className="image-grid-container">
-      <ul className="image-grid">
-        {shuffledProjects.map((project, index) => {
-          const animationClass =
-            index === currentAnimationIndex ? getRandomAnimationClass() : "";
-          const isHovered = index === hoveredProject;
+        <ul className="image-grid">
+          {shuffledProjects.map((project, index) => {
+            const animationClass =
+              index === currentAnimationIndex ? getRandomAnimationClass() : "";
+            const isHovered = index === hoveredProject;
 
-          return (
-            <li
-              className={` grid-item project ${animationClass} ${
-                isHovered ? "hovered" : ""
-              }`}
-              key={index}
-              onMouseEnter={() => handleProjectHover(index)}
-              onMouseLeave={() => setHoveredProject(null)}
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                onClick={() => openModal(project)}
-              />
-              <div className="project-links">
-                <h3>{project.title}</h3>
-                <a href={project.live} className="deploy-link">
-                  <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
-                </a>
-                <a href={project.repo} className="repo-link">
-                  <FontAwesomeIcon icon={faGithubAlt} /> Repo Link
-                </a>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-      
-      {/* Modal */}
-      {isModalOpen && selectedProject && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-            <a href={selectedProject.live} className="modal-deploy-link">
-              <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
-            </a>
+            return (
+              <li
+                className={` grid-item project ${animationClass} ${
+                  isHovered ? "hovered" : ""
+                }`}
+                key={index}
+                onMouseEnter={() => handleProjectHover(index)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  onClick={() => openModal(project)}
+                />
+                <div className="project-links">
+                  <h3>{project.title}</h3>
+                  <a href={project.live} className="deploy-link">
+                    <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
+                  </a>
+                  <a href={project.repo} className="repo-link">
+                    <FontAwesomeIcon icon={faGithubAlt} /> Repo Link
+                  </a>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* Modal */}
+        {isModalOpen && selectedProject && (
+          <div className="modal">
+            <div className="modal-content">
+              <span className="close" onClick={closeModal}>
+                &times;
+              </span>
+              <h2>{selectedProject.title}</h2>
+              <p>{selectedProject.description}</p>
+              <a href={selectedProject.live} className="modal-deploy-link">
+                <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
+              </a>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
     </div>
   );
 };

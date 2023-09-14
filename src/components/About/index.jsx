@@ -38,22 +38,15 @@ const About = () => {
           </h1>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-            quisquam eaque blanditiis dicta vitae officia sequi, reiciendis fuga
-            veritatis, aut at totam inventore! Blanditiis officiis sequi
-            corporis! Dolorem, odit rem!
+          I am a dedicated and passionate entry-level software developer based in Houston, TX. With a strong desire to learn and grow in the field, I am actively seeking opportunities that will allow me to apply my technical skills and contribute to innovative projects. My enthusiasm for problem-solving, combined with my organizational abilities, makes me a valuable asset to any team.
           </p>
+          <br />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-            quisquam eaque blanditiis dicta vitae officia sequi, reiciendis fuga
-            veritatis, aut at totam inventore! Blanditiis officiis sequi
-            corporis! Dolorem, odit rem!
+          My journey into software development began after gaining experience as a Nondestructive Testing Technician. During my time in that role, I honed my attention to detail, critical thinking, and teamwork skills. Now, I am excited to transition into the world of coding and bring the same level of dedication and commitment to software development.
           </p>
+          <br />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-            quisquam eaque blanditiis dicta vitae officia sequi, reiciendis fuga
-            veritatis, aut at totam inventore! Blanditiis officiis sequi
-            corporis! Dolorem, odit rem!
+          In addition to my technical skills, I bring a diverse skill set that includes proficiency in Microsoft Office, HTML/CSS, JavaScript, React.js, Python, Java, C#, and various database technologies. I am also well-versed in deployment and version control tools like Heroku, Git, and GitHub Pages. My goal is to leverage this knowledge and continue learning and growing in the ever-evolving field of software developmen
           </p>
         </div>
         <div className="stage-cube-cont">

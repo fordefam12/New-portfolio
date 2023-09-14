@@ -20,6 +20,7 @@
     position: relative;
     margin-bottom: 40px;
     left: 10px;
+    
 
 
     &::before {
@@ -118,6 +119,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+left: auto;
 
   .banner--content {
     text-align: center;

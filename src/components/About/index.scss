@@ -1,11 +1,12 @@
 .stage-cube-cont {
   width: 50%;
   height: 100%;
-  top: 0;
+  top: -200px;
   padding-top: 18%;
   margin-left: 0;
   position: absolute;
   left: 1200px;
+  perspective: 1000px;
   overflow: hidden;
 }
 .cudespinner {
@@ -28,6 +29,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 25px 0px lightblue;
+    
   }
   .face1 {
     transform: translateZ(100px);
@@ -77,7 +79,7 @@
   position:absolute;
   left: 100px;
   transform: translateY(-30%);
-  top: 50%;
+  top: 300px;
   width: 35%;
   vertical-align: middle;
   display: table-cell;
@@ -125,6 +127,7 @@
       font-weight: 300;
       min-width: fit-content;
       animation: pulse 3s;
+      width: 100px;
 
       &:nth-of-type(1){
           animation-delay: 1s;
@@ -136,4 +139,47 @@
           animation-delay: 3s;
       }
   }
+}
+/* index.scss */
+/* Existing styles */
+
+/* Add media query for mobile devices */
+@media (max-width: 768px) {
+  .about-page {
+    // padding: 20px; /* Add some padding for better spacing on smaller screens */
+    width: 100%;
+    left: 20px;
+    top: 300px;
+  }
+
+  .text-zone {
+    text-align: center; /* Center-align text on smaller screens */
+    width: auto;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 24px; /* Adjust font size for the heading on smaller screens */
+  }
+
+  p {
+    font-size: 16px; /* Adjust font size for paragraphs on smaller screens */
+    width: 100%;
+    text-align: center;
+  }
+  
+  .stage-cube-cont {
+    text-align: center;
+    left: 50px;
+    top: -100px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row; /* Default layout for larger screens */
+  
+    @media (max-width: 768px) {
+      flex-direction: column; /* Switch to column layout for mobile screens */
+    }
+  }
+  
 }
