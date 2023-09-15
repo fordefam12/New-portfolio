@@ -20,4 +20,3 @@ AnimatedLetters.propTypes = {
 };
 
 export default AnimatedLetters;
-
