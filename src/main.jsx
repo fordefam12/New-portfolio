@@ -1,5 +1,8 @@
 import ReactDOM from 'react-dom/client'
-// Bringing in the required imports from 'react-router-dom' to set up application routing behavior
+import $ from 'jquery'; // Import jQuery
+// Import other scripts after jQuery
+import './js/AnimatedResponsiveImageGrid/js/jquery.gridrotator'; // Adjust the path to the script
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css'

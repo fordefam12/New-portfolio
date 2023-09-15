@@ -1,31 +1,33 @@
-// import AnimatedResponsiveImageGrid from '@barkleyrei/animated-responsive-image-grid';
+import '../../js/AnimatedResponsiveImageGrid/js/jquery.gridrotator'
+import "../../js/AnimatedResponsiveImageGrid/css/demo.css";
+import "../../js/AnimatedResponsiveImageGrid/css/fallback.css";
+import "../../js/AnimatedResponsiveImageGrid/css/style.css";
+import { Component } from 'react';
+import $ from 'jquery';
 
-// // import { AnimatedResponsiveImageGrid } from '@barkleyrei/animated-responsive-image-grid';
+class GridRotator extends Component {
+  componentDidMount() {
+    this.initializeGridRotator();
+  }
 
+  initializeGridRotator() {
+    $(this.gridRotatorRef).gridrotator({
+      // Configure your options here
+    });
+  }
 
-// function Testing() {
-//   // Define your images array with the required properties (src, alt, width, height).
-//   const images = [
-//     {
-//       src: 'image1.jpg',
-//       alt: 'Image 1',
-//       width: 300,
-//       height: 200,
-//     },
-//     {
-//       src: 'image2.jpg',
-//       alt: 'Image 2',
-//       width: 300,
-//       height: 200,
-//     },
-//     // Add more images as needed
-//   ];
+  componentWillUnmount() {
+    // Clean up and destroy the gridrotator when the component unmounts
+    $(this.gridRotatorRef).gridrotator('destroy');
+  }
 
-//   return (
-//     <div className="my-image-grid">
-//       <AnimatedResponsiveImageGrid images={images} />
-//     </div>
-//   );
-// }
+  render() {
+    return (
+      <div ref={(el) => (this.gridRotatorRef = el)}>
+        {/* Add your gridrotator content here */}
+      </div>
+    );
+  }
+}
 
-// export default Testing;
+export default GridRotator;

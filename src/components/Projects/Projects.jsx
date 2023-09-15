@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
-// import  { Component } from 'react';
 import "../../js/AnimatedResponsiveImageGrid/css/demo.css";
 import "../../js/AnimatedResponsiveImageGrid/css/fallback.css";
 import "../../js/AnimatedResponsiveImageGrid/css/style.css";
-
+import '../../js/AnimatedResponsiveImageGrid/js/jquery.gridrotator'
 import "./Projects.scss"; // Add your custom styles here
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-// import AnimatedResponsiveImageGrid from '@barkleyrei/animated-responsive-image-grid';
 
-// import { animated } from 'react-spring';
 
 const projects = [
   {
@@ -123,6 +120,7 @@ const getRandomAnimationClass = () => {
   ];
   return animationClasses[Math.floor(Math.random() * animationClasses.length)];
 };
+
 
 
 const shuffleArray = (array) => {
