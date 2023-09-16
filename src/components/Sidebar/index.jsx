@@ -1,6 +1,6 @@
 import "./index.scss";
 import { Link, NavLink } from "react-router-dom";
-import LogoS from "../../assets/images/Gear_5_Infobox.png";
+import LogoS from "../../assets/Gear_5_twisted arm Logo.png";
 import logoSubtitle from "../../assets/images/digital_spaceCity_logo-removebg-preview.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

@@ -34,7 +34,7 @@ a img {
 
 .container {
 	position: relative;
-	background: transparent url(../images/light.png) fixed no-repeat center top;
+	background: transparent url(../images/light.png) fixed no-repeat left top;
 	z-index: 9999;
 }
 

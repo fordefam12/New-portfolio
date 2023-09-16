@@ -1,9 +1,38 @@
+import { useState, useEffect } from "react";
+import { useSpring, animated, config } from "react-spring";
 import "./index.scss"; // Import your custom styles here
 import resume from "../../assets/brandonForde.pdf";
 
 export default function Resume() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Add logic to detect when the resume section enters the viewport
+    const handleScroll = () => {
+      const element = document.querySelector(".resume-container");
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        setIsVisible(isVisible);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial visibility
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const springProps = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0px)" : "translateY(50px)",
+    config: config.wobbly, // Adjust the animation easing
+    delay: isVisible ? 100 : 0, // Delay the animation start
+  });
+
+
+  
   return (
-    <div className="resume-container">
+    <animated.div className="resume-container" style={springProps}>
       <h1 className="resume-title">Resume</h1>
       <a
         className="resume-download"
@@ -75,6 +104,7 @@ export default function Resume() {
           <li className="face30">Continuous Integration</li>
         </ul>
       </div>
-    </div>
+      
+    </animated.div>
   );
 }

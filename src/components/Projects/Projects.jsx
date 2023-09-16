@@ -143,13 +143,11 @@ const duplicateArray = (array, times) => {
 const Projects = () => {
   const [shuffledProjects, setShuffledProjects] = useState([]);
   const [currentAnimationIndex, setCurrentAnimationIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
-  const [selectedProject, setSelectedProject] = useState(null);
   const [hoveredProject, setHoveredProject] = useState(null);
 
   useEffect(() => {
-    const rows = 8; // Number of rows
-    const columns = 6; // Number of columns
+    const rows = 10; // Number of rows
+    const columns = 10; // Number of columns
     const projectsToDisplay = rows * columns;
 
     // Shuffle the projects array once at the beginning
@@ -169,16 +167,6 @@ const Projects = () => {
       clearInterval(interval);
     };
   }, [shuffledProjects]);
-
-  const openModal = (project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-    setIsModalOpen(false);
-  };
 
   const handleProjectHover = (projectIndex) => {
     setHoveredProject(projectIndex);
@@ -210,7 +198,6 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  onClick={() => openModal(project)}
                 />
                 <div className="project-links">
                   <h3>{project.title}</h3>
@@ -225,22 +212,6 @@ const Projects = () => {
             );
           })}
         </ul>
-
-        {/* Modal */}
-        {isModalOpen && selectedProject && (
-          <div className="modal">
-            <div className="modal-content">
-              <span className="close" onClick={closeModal}>
-                &times;
-              </span>
-              <h2>{selectedProject.title}</h2>
-              <p>{selectedProject.description}</p>
-              <a href={selectedProject.live} className="modal-deploy-link">
-                <FontAwesomeIcon icon={faPaperPlane} /> Deploy Link
-              </a>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

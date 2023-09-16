@@ -1,5 +1,5 @@
 import Particles from 'react-particles'
-import bouncingImage from '../../assets/Gear_5_Infobox.png'
+import bouncingImage from '../../assets/Gear_5_Logo.png'
 import './particles.scss' // Import your SCSS file
 import { loadFull } from 'tsparticles'
 
