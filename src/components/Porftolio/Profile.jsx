@@ -37,7 +37,11 @@ const Profile = () => {
             <h3 className="name">Branodn Forde</h3>
             <h1 className="designation">Freelance graphic designer</h1>
             <p className="tagline">
-              Scroll to see more 
+            <svg className="arrows">
+							<path className="a1" d="M0 0 L30 32 L60 0"></path>
+							<path className="a2" d="M0 20 L30 52 L60 20"></path>
+							<path className="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
             </p>
           </div>
         </section>
@@ -136,10 +140,9 @@ const Profile = () => {
        
         {/* #pricing */}
     
-        <script src="js/script.js"></script>
-        {/* AOS */}
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>AOS.init();</script>
+    
+      
+        
       </section>
     </div>
   );

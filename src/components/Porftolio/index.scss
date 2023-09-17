@@ -1,3 +1,19 @@
+/* Profile.css */
+
+.profile-page {
+  width: 100%;
+  height: 100vh;
+  background-color: #333; /* Set your desired background color */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: aqua;
+  z-index: 6;
+  left: auto;
+  
+}
+
+/* Add any other styles as needed */
 
 .jobs {
   position: relative;
@@ -143,3 +159,50 @@ left: auto;
 
 /* Add more styles for other sections as needed */
 
+.arrows {
+	// width: 60px;
+	// height: 90px;
+	position: absolute;
+	// left: 50%;
+	margin-left: -30px;
+	// bottom: 2px;
+}
+
+.arrows path {
+	stroke: #ff0101;
+	fill: transparent;
+	stroke-width: 10px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
