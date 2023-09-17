@@ -1,110 +1,166 @@
-import { useState, useEffect } from "react";
-import { useSpring, animated, config } from "react-spring";
-import "./index.scss"; // Import your custom styles here
+import { useState } from "react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "./index.scss";
+// import "./timeLineElements";
+import "react-vertical-timeline-component/style.min.css";
+import { ReactComponent as WorkIcon } from "../../assets/images/logo-lines-2 (1).svg";
+import { ReactComponent as SchoolIcon } from "../../assets/images/react.svg";
 import resume from "../../assets/brandonForde.pdf";
-
-export default function Resume() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Add logic to detect when the resume section enters the viewport
-    const handleScroll = () => {
-      const element = document.querySelector(".resume-container");
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-        setIsVisible(isVisible);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial visibility
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const springProps = useSpring({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0px)" : "translateY(50px)",
-    config: config.wobbly, // Adjust the animation easing
-    delay: isVisible ? 100 : 0, // Delay the animation start
-  });
+import timelineElemnets from "./timeLineElements";
 
 
+const Resume = () => {
+  let WorkIconStyles = { background: "#06d6a0" };
+  let schoolIconStyles = { background: "##9c74f" };
+ 
+  const [showFrontendSkills, setShowFrontendSkills] = useState(true);
+  const [showBackendSkills, setShowBackendSkills] = useState(true);
   
-  return (
-    <animated.div className="resume-container" style={springProps}>
-      <h1 className="resume-title">Resume</h1>
-      <a
-        className="resume-download"
-        href={resume}
-        target="_blank"
-        rel="noopener noreferrer"
-        download
-      >
-        Download Resume
-      </a>
 
-      <div className="skills-section spherespinner">
-        <h2 className="skills-subtitle sphere">
-          Computer Science Applied to JavaScript
-        </h2>
-        <ul className="skills-list sphere">
-          <li className="face1">Algorithms (Searches, Sorts)</li>
-          <li className="face2">Performance</li>
-          <li className="face3">Time Complexity</li>
-          <li className="face4">Big O Notation</li>
-          <li className="face5">Data Structures</li>
-        </ul>
+  // Define your front-end and back-end categories
+  const frontendSkills = (
+    <div>
+      <h2>Computer Science Applied to JavaScript</h2>
+      <ul>
+        <li>Algorithms (Searches, Sorts)</li>
+        <li>Performance</li>
+        <li>Time Complexity</li>
+        <li>Big O Notation</li>
+        <li>Data Structures</li>
+      </ul>
 
-        <h2 className="skills-subtitle ">Browser Based Technologies</h2>
-        <ul className="skills-list sphere">
-          <li className="face6">HTML/CSS</li>
-          <li className="face7">JavaScript/jQuery</li>
-          <li className="face8">Responsive Design</li>
-          <li className="face9">Bootstrap</li>
-          <li className="face10">Progressive Web Applications (PWAs)</li>
-          <li className="face11">Local Storage, Session Storage, IndexedDB</li>
-          <li className="face12">React.js</li>
-        </ul>
-
-        <h2 className="skills-subtitle sphere">Databases</h2>
-        <ul className="skills-list face3">
-          <li className="face13">MySQL</li>
-          <li className="face14">MongoDB</li>
-        </ul>
-
-        <h2 className="skills-subtitle sphere">Server Side Development</h2>
-        <ul className="skills-list face4">
-          <li className="face15">User Authentication</li>
-          <li className="face16">Template Engines</li>
-          <li className="face17">
-            MERN Stack (MongoDB, Express.js, React.js, Node.js)
-          </li>
-        </ul>
-
-        <h2 className="skills-subtitle sphere">API Design</h2>
-        <ul className="skills-list face5">
-          <li className="face18">Client-Server Model</li>
-          <li className="face19">API</li>
-          <li className="face20">Rest</li>
-          <li className="face21">JSON</li>
-          <li className="face22">AJAX (Fetch API)</li>
-          <li className="face23">HTTP request methods</li>
-          <li className="face24">GraphQL</li>
-        </ul>
-
-        <h2 className="skills-subtitle sphere">Deployment and Delivery</h2>
-        <ul className="skills-list face6">
-          <li className="face25">Heroku</li>
-          <li className="face26">Git</li>
-          <li className="face26">GitHub Pages</li>
-          <li className="face27">Shell Scripting</li>
-          <li className="face28">Unit Testing</li>
-          <li className="face29">Linting</li>
-          <li className="face30">Continuous Integration</li>
-        </ul>
-      </div>
-      
-    </animated.div>
+      <h2>Browser Based Technologies</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>JavaScript/jQuery</li>
+        <li>Responsive Design</li>
+        <li>Bootstrap</li>
+        <li>Progressive Web Applications (PWAs)</li>
+        <li>Local Storage, Session Storage, IndexedDB</li>
+        <li>React.js</li>
+      </ul>
+    </div>
   );
-}
+
+  const backendSkills = (
+    <div>
+      <h2>Databases</h2>
+      <ul>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+      </ul>
+
+      <h2>Server Side Development</h2>
+      <ul>
+        <li>User Authentication</li>
+        <li>Template Engines</li>
+        <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
+      </ul>
+
+      <h2>API Design</h2>
+      <ul>
+        <li>Client-Server Model</li>
+        <li>API</li>
+        <li>Rest</li>
+        <li>JSON</li>
+        <li>AJAX (Fetch API)</li>
+        <li>HTTP request methods</li>
+        <li>GraphQL</li>
+      </ul>
+
+      <h2>Deployment and Delivery</h2>
+      <ul>
+        <li>Heroku</li>
+        <li>Git</li>
+        <li>GitHub Pages</li>
+        <li>Shell Scripting</li>
+        <li>Unit Testing</li>
+        <li>Linting</li>
+        <li>Continuous Integration</li>
+      </ul>
+    </div>
+  );
+
+  return (
+    <div>
+       <div className="container">
+        <h1 className="title">Resume</h1>
+        
+
+        {/* Toggle buttons to control visibility */}
+        <div className="toggle-buttons">
+          <button
+            className="glow-on-hover"
+            onClick={() => setShowFrontendSkills(!showFrontendSkills)}
+          >
+            {showFrontendSkills ? "Hide Frontend Skills" : "Show Frontend Skills"}
+          </button>
+          {"  "} {/* Add some spacing */}
+          <button
+            className="glow-on-hover"
+            onClick={() => setShowBackendSkills(!showBackendSkills)}
+          >
+            {showBackendSkills ? "Hide Backend Skills" : "Show Backend Skills"}
+          </button>
+        </div>
+        <a
+          className="resume-download"
+          href={resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          Download Resume
+        </a>
+        {/* Frontend and Backend Skills Side by Side */}
+        <div className="skills">
+          <div className="frontend">
+            <h2 >Front-end Skills</h2>
+            {showFrontendSkills && frontendSkills}
+          </div>
+
+          <div className="backend">
+            <h2 >Back-end Skills</h2>
+            {showBackendSkills && backendSkills}
+            
+          </div>
+        </div>
+       
+
+      <VerticalTimeline>
+        {timelineElemnets.map((element) => {
+          let isWorkIcon = element.icon === "work";
+          let showButton =
+            element.buttonText !== undefined &&
+            element.buttonText !== null &&
+            element.buttonText !== "";
+          return (
+            <VerticalTimelineElement
+              key={element.key}
+              date={element.date}
+              dateClassName="date"
+              iconStyle={isWorkIcon ? WorkIconStyles : schoolIconStyles}
+              icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                {element.title}
+              </h3>
+              <h5 className="vertical-timeline-element-subtitle">
+                {element.location}
+              </h5>
+              <p id="description">{element.description}</p>
+              {showButton && <a className={`button ${isWorkIcon ? "workButton" : "schoolButton"}`} href="/">{element.buttonText}</a>}
+            </VerticalTimelineElement>
+          );
+        })}
+      </VerticalTimeline>
+      <script src="timeline.js"></script>
+    </div>
+    </div>
+  );
+};
+
+export default Resume;

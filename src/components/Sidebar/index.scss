@@ -4,9 +4,10 @@
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: 3;
+  z-index: 9999;
   min-height: 500px;
   left: 1px;
+  transition: top 0.3s; /* Add smooth transition for the top property */
 
   .logo {
     display: block;
@@ -144,11 +145,13 @@
 }
 @media screen and (max-width: 1200px) {
   .nav-bar {
+    /* Update styles for mobile */
     background: transparent;
     position: initial;
     height: auto;
     min-height: auto;
-    z-index: 2;
+    z-index: 2; /* Adjust z-index as needed */
+  
     a {
   display:flex;
   justify-content: center;
@@ -182,4 +185,7 @@
   opacity: 1;
   }
 }
+}
+.nav-bar{
+  position: fixed;
 }

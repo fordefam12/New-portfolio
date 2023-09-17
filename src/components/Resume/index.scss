@@ -1,118 +1,130 @@
-html {
-  overflow: scroll;
+.container {
+  text-align: center;
+  color: #002bff;
+  display: block;
 }
-.resume-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    z-index: 2;
-   
-    
+.skills-container {
+  // text-align: center;
+  z-index: 2;
+  left: 100px;
+}
+.glow-on-hover {
+  width: 140px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #ff0000;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #4e4e4e,
+    #ff00c8,
+    #ff0000,
+    rgb(220, 20, 60)
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #e90303;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #444444;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.skills {
   
-//   .resume-title {
-//     font-size: 28px;
-//     text-align: center;
-//     margin-bottom: 10px;
-//   }
+  background-color:transparent;
+  max-width: 70%;
   
-//   .resume-download {
-//     display: block;
-//     text-align: center;
-//     margin-bottom: 20px;
-//     color: #007bff;
-//     text-decoration: none;
-//   }
+  max-height: auto;
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  height: auto; /* Set height to 100% of the viewport height for vertical centering */
   
-//   .skills-section {
-//     margin-bottom: 30px;
-//   }
+}
+.frontend {
+  background-color: #68686848;
+  border-radius: 10px;
+  padding: 1px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: auto;
+  margin: 0 30px;
+  max-height: 900px;
+ width: 700px;
+ color: #33ff00;
+}
+
+.backend {
+ position: relative;
+ background-color: #68686848;
+ border-radius: 10px;
+ padding: 1px;
+ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+ margin: 0 70px;
+ height: auto;
+ max-height: 900px;
+ width: 700px;
+ color: #fffb00;
+}
+li::marker{
+  color: transparent !important;
+}
+a {
+  color: #f7f7f7 !important;
   
-//   .skills-subtitle {
-//     font-size: 24px;
-//     margin-bottom: 10px;
-//   }
-  
-//   .skills-list {
-//     list-style: none;
-//     padding-left: 0;
-//     margin: 0;
-//   }
-  
-//   .skills-list li {
-//     margin-bottom: 5px;
-//   }
-//   .scrollable-list {
-//     max-height: 200px; /* Set the maximum height for the scrollable list */
-//     overflow-y: auto; /* Enable vertical scrolling when content overflows */
-//     margin-bottom: 20px; /* Add some spacing at the bottom */
-//   }
-// /* Add these styles to your existing SCSS file or import a new CSS file */
-
-// /* Modify the perspective and animation properties for globe effect */
-// .resume-container {
-//   perspective: 1000px;
-// }
-
-// .spherespinner {
-//   animation-name: spinsphere;
-//   animation-timing-function: linear;
-//   animation-iteration-count: infinite;
-//   animation-duration: 12s;
-//   transform-style: preserve-3d;
-//   transform-origin: 50% 50%;
-//   margin-left: calc(50% - 100px);
-//   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-// }
-
-// /* Adjust the sphere's faces for globe effect */
-// .skills-list.sphere li {
-//   position: absolute;
-//   width: 200px;
-//   height: 200px;
-//   border: 2px solid #ffffff;
-//   background: rgba(168, 164, 164, 0.4);
-//   text-align: center;
-//   font-size: 24px; /* Adjust font size as needed */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   box-shadow: 0 0 25px 0px lightblue;
-//   border-radius: 50%;
-//   transform: rotateY(0deg) rotateX(90deg) translateZ(100px);
-// }
-
-// /* Define keyframes for spinning globe */
-// @keyframes spinsphere {
-//   from {
-//     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-//   }
-//   to {
-//     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   .resume-container {
-//     padding: 20px; /* Add some padding for better spacing on smaller screens */
-//   }
-
-//   .skills-section {
-//     margin-bottom: 20px; /* Add margin between sections on smaller screens */
-//   }
-
-//   .skills-subtitle {
-//     font-size: 18px; /* Adjust font size for smaller screens */
-//   }
-
-//   .skills-list {
-//     list-style: none;
-//     padding: 0;
-//   }
-
-//   .skills-list li {
-//     font-size: 14px; /* Adjust font size for list items on smaller screens */
-//     margin-bottom: 8px; /* Add margin between list items on smaller screens */
-//   }
-// }
+}

@@ -4,12 +4,68 @@ body {
   padding: 0;
   line-height: 1.5;
   font-weight: 400;
-  color: rgb(119, 56, 12);
+  color: rgb(0, 0, 0);
 }
 
-.container {
-  padding: 2rem;
-  margin: 0 auto;
+.title {
+  font-size: 15em;
+  color: aqua;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+h3 {
+  padding-top: 0.5em;
+}
+.vertical-timeline-element-content {
+  box-shadow: 0.25em 0.5em 0 rgb(78, 78, 78),
+    0 0.4em 1.25em 0 rgb(255, 255, 255) !important ;
+  padding: 2em 3m !important;
+}
+.date {
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", "sans-serif ", "Gill Sans", "Gill Sans MT",
+    Calibri;
+  background-color: rgb(0, 0, 0);
+}
+#description {
+  margin: 1.5em 0 2em 0;
+}
+.button {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: rgb(25, 0, 255);
+}
+.workButton {
+  background-color: green;
+}
+.workButton:hover {
+  background-color: rgb(2, 92, 6);
+}
+.schoolButton {
+  background-color: rgb(230, 255, 9);
+}
+.schoolButton:hover {
+  background-color: rgb(104, 110, 51);
+}
+@media only screen and (max-width: 1700px) {
+  .vertical-timeline-element-content {
+    display: block !important;
+    float: none !important;
+    background-color: transparent;
+    color: black;
+    margin-top: 2.5em;
+  }
+  .vertical-timeline-element-date {
+    text-align: left;
+    color: black;
+    left: 10px !important;
+    background-color: transparent !important;
+    top: 160px !important;
+    width: 40% !important;
+    display: block !important;
+   
+  }
 }
 
 .top-section {
@@ -62,9 +118,8 @@ body {
   border-radius: 1rem;
   align-items: cneter;
   min-height: 300px;
-
 }
-.section:nth-child(odd){
+.section:nth-child(odd) {
   flex-direction: row-reverse;
   transform: translateX(100%);
 }
@@ -80,11 +135,10 @@ body {
   transform: translateX(-50%);
 }
 
-.show-me:nth-child(n){
+.show-me:nth-child(n) {
   opacity: 1;
   transform: none;
-
 }
-h1{
+h1 {
   font-weight: 400;
 }
