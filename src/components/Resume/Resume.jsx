@@ -1,25 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "./index.scss";
-// import "./timeLineElements";
+
 import "react-vertical-timeline-component/style.min.css";
 import { ReactComponent as WorkIcon } from "../../assets/images/logo-lines-2 (1).svg";
 import { ReactComponent as SchoolIcon } from "../../assets/images/react.svg";
 import resume from "../../assets/brandonForde.pdf";
 import timelineElemnets from "./timeLineElements";
+import AnimatedLetters from "../AnimatedLetters";
 
 
 const Resume = () => {
+  const [letterClass, setletterClass] = useState('text-animate')
   let WorkIconStyles = { background: "#06d6a0" };
   let schoolIconStyles = { background: "##9c74f" };
  
   const [showFrontendSkills, setShowFrontendSkills] = useState(true);
   const [showBackendSkills, setShowBackendSkills] = useState(true);
   
-
+  useEffect(() => {
+    const timeOutID = setTimeout(() => {
+      setletterClass('text-animate-hover')
+    }, 4000)
+    return () => {
+      clearTimeout(timeOutID)
+    }
+  }, [])
   // Define your front-end and back-end categories
   const frontendSkills = (
     <div>
@@ -87,7 +96,15 @@ const Resume = () => {
   return (
     <div>
        <div className="container">
-        <h1 className="title">Resume</h1>
+       <h1>
+            <div className="glitch">
+              <AnimatedLetters
+                strArray={['R', 'e', 's', 'u', 'm', 'e']}
+                letterClass={letterClass}
+                idx={15}
+              />
+            </div>
+          </h1>
         
 
         {/* Toggle buttons to control visibility */}
@@ -106,8 +123,9 @@ const Resume = () => {
             {showBackendSkills ? "Hide Backend Skills" : "Show Backend Skills"}
           </button>
         </div>
+        
         <a
-          className="resume-download"
+          className="glow-on-hover"
           href={resume}
           target="_blank"
           rel="noopener noreferrer"
@@ -115,6 +133,7 @@ const Resume = () => {
         >
           Download Resume
         </a>
+        
         {/* Frontend and Backend Skills Side by Side */}
         <div className="skills">
           <div className="frontend">
@@ -152,7 +171,7 @@ const Resume = () => {
                 {element.location}
               </h5>
               <p id="description">{element.description}</p>
-              {showButton && <a className={`button ${isWorkIcon ? "workButton" : "schoolButton"}`} href="/">{element.buttonText}</a>}
+              {showButton && <a className={`glow-on-hover ${isWorkIcon ? "workButton" : "schoolButton"}`} href="/">{element.buttonText}</a>}
             </VerticalTimelineElement>
           );
         })}

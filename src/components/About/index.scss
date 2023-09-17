@@ -1,14 +1,14 @@
 .stage-cube-cont {
-  width: 50%;
+  width:60%;
   height: 100%;
-  top: -200px;
-  padding-top: 18%;
+  top: 100px;
+  padding-top: 20%;
   margin-left: 0;
   position: absolute;
   left: 1200px;
-  perspective: 1000px;
   overflow: hidden;
 }
+
 .cudespinner {
   animation-name: spincube;
   animation-timing-function: ease-in-out;
@@ -17,10 +17,11 @@
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
+
   div {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 200px; /* Set width to 200px for all faces */
+    height: 200px; /* Set height to 200px for all faces */
     border: 2px solid #ffffff;
     background: rgba(168, 164, 164, 0.4);
     text-align: center;
@@ -29,8 +30,8 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 25px 0px lightblue;
-    
   }
+
   .face1 {
     transform: translateZ(100px);
   }
@@ -47,9 +48,8 @@
     transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
   }
   .face6 {
-    transform: translateY(100px) rotateX(90deg) ;
+    transform: translateY(100px) rotateX(90deg);
   }
-
 }
 
 @keyframes spincube {
@@ -86,6 +86,7 @@
   max-height: 90%;
   overflow: visible;
   z-index: 2;
+  text-align: left !important;
 
   h1 {
       font-size: 53px;
