@@ -6,7 +6,7 @@ import { loadFull } from 'tsparticles'
 const ParticlesContainer = () => {
   const particlesInit = async (engine) => {
     await loadFull(engine)
-    console.log(loadFull)
+    
     engine.addShape('bouncing-image', {
       custom: true,
       image: {

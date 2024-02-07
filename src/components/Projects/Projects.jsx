@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../../js/AnimatedResponsiveImageGrid/css/demo.css";
 import "../../js/AnimatedResponsiveImageGrid/css/fallback.css";
 import "../../js/AnimatedResponsiveImageGrid/css/style.css";
@@ -7,7 +7,7 @@ import "./Projects.scss"; // Add your custom styles here
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-
+import $  from 'jquery'
 
 const projects = [
   {
@@ -81,8 +81,8 @@ const projects = [
       "The philosophy at Awristocrats is that a watch is not just a timekeeping device; it's a reflection of your unique personality and a symbol of your discerning taste. Their curated collection of exquisite luxury watches is designed to cater to your desire for the finest craftsmanship, precision, and unparalleled beauty.",
     repo: "https://github.com/fordefam12/Awristocrats",
     live: "https://arcane-caverns-68488-3502f0db0406.herokuapp.com/",
-  },
-];
+  }]
+  
 
 const getRandomAnimationClass = () => {
   const animationClasses = [
@@ -121,6 +121,12 @@ const getRandomAnimationClass = () => {
   return animationClasses[Math.floor(Math.random() * animationClasses.length)];
 };
 
+// $(document).ready(function () {
+//   // Initialize GridRotator on a specific element (replace 'your-element-selector' with your selector)
+//   $('.your-element-selector').gridrotator({
+//     // Add your configuration options here
+//   });
+// });
 
 
 const shuffleArray = (array) => {
@@ -144,17 +150,56 @@ const Projects = () => {
   const [shuffledProjects, setShuffledProjects] = useState([]);
   const [currentAnimationIndex, setCurrentAnimationIndex] = useState(0);
   const [hoveredProject, setHoveredProject] = useState(null);
+  const gridRef = useRef(null);
 
   useEffect(() => {
     const rows = 10; // Number of rows
     const columns = 10; // Number of columns
     const projectsToDisplay = rows * columns;
-
+  
     // Shuffle the projects array once at the beginning
     const shuffled = shuffleArray(projects);
     const projectsSubset = shuffled.slice(0, projectsToDisplay);
     setShuffledProjects(duplicateArray(projectsSubset, 5)); // Adjust the number of duplicates as needed
-  }, []);
+  
+    // Initialize the gridrotator effect
+    $(document).ready(function () {
+    if (gridRef.current) {
+      const grid = $(gridRef.current);
+      grid.gridrotator({
+        rows,
+        columns,
+        slideshow: true,
+        interval: 3000, // Change image every 3 seconds
+        maxStep: 2,
+        preventClick: true,
+        w1024: {
+          rows: 5,
+          columns: 5,
+        },
+        w768: {
+          rows: 4,
+          columns: 4,
+        },
+        w480: {
+          rows: 3,
+          columns: 3,
+        },
+        w320: {
+          rows: 2,
+          columns: 2,
+        },
+        autoplay: true,
+      });
+  
+      return () => {
+        // Clean up the gridrotator effect when the component unmounts
+        grid.gridrotator("destroy");
+        console.log(grid.gridrotator());
+      };
+    }
+  }, [gridRef]);
+},[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -180,7 +225,7 @@ const Projects = () => {
   return (
     <div className="projects-page">
       <div className="image-grid-container">
-        <ul className="image-grid">
+        <ul className="image-grid" ref={gridRef}>
           {shuffledProjects.map((project, index) => {
             const animationClass =
               index === currentAnimationIndex ? getRandomAnimationClass() : "";
@@ -195,10 +240,7 @@ const Projects = () => {
                 onMouseEnter={() => handleProjectHover(index)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                />
+                <img src={project.image} alt={project.title} />
                 <div className="project-links">
                   <h3>{project.title}</h3>
                   <a href={project.live} className="deploy-link">
@@ -216,5 +258,4 @@ const Projects = () => {
     </div>
   );
 };
-
 export default Projects;

@@ -128,7 +128,6 @@ body {
 
 /* Banner Styles */
 .banner {
-  // background-image: url('path-to-banner-image.jpg');
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -160,12 +159,8 @@ left: auto;
 /* Add more styles for other sections as needed */
 
 .arrows {
-	// width: 60px;
-	// height: 90px;
 	position: absolute;
-	// left: 50%;
 	margin-left: -30px;
-	// bottom: 2px;
 }
 
 .arrows path {

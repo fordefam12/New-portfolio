@@ -90,44 +90,6 @@ const Profile = () => {
               As an entry-level software developer, I bring a foundational understanding of Computer Science Applied to JavaScript and a strong desire to learn and grow in the field. My skills encompass essential areas such as algorithmic thinking, including searches and sorts, as well as basic knowledge of performance optimization techniques. I have a grasp of time complexity and an introductory understanding of Big O Notation, which I am eager to expand upon as I gain more experience.
               </p>
             </div>
-            {/* <div className="right">
-              <div
-                className="item"
-                data-aos="flip-left"
-                data-aos-duration="1000"
-              >
-                <img src="assets/images/photoshop.png" alt="Photoshop" />
-                <h3>Abode Photoshop</h3>
-                <p>
-                  laboriosam temporibus harum culpa recusandae nemo tempora ut
-                  vitae earum quo.
-                </p>
-              </div>
-              <div
-                className="item"
-                data-aos="flip-right"
-                data-aos-duration="2000"
-              >
-                <img src="assets/images/illustrator.png" alt="Illustrator" />
-                <h3>Abode Illustrator</h3>
-                <p>
-                  Sunt doloribus perferendis officia soluta enim optio
-                  distinctio exercitationem.
-                </p>
-              </div>
-              <div
-                className="item"
-                data-aos="flip-left"
-                data-aos-duration="1500"
-              >
-                <img src="assets/images/indesign.png" alt="InDesign" />
-                <h3>Abode InDesign</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit qui
-                  debitis.
-                </p>
-              </div>
-            </div> */}
           </div>
         </section>
         {/* #skill */}
